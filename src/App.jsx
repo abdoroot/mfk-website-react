@@ -3,8 +3,10 @@ import Home from './pages/Home';
 import Services from './pages/Services';
 import ServiceDetails from './pages/ServiceDetails';
 import Contact from './pages/Contact';
+import useGTMPageView from '@/components/useGTMPageView';
 
 function App() {
+  useGTMPageView();
   return (
     <BrowserRouter>
       <Routes>
