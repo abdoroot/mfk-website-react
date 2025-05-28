@@ -1,0 +1,76 @@
+{
+    "header": {
+        "home": "Home",
+        "services": "Services",
+        "about": "About Us",
+        "whyus": "Why Us",
+        "testimonials": "Testimonials",
+        "contact": "Contact"
+    },
+    "hero": {
+        "title": "Home Maintenance With",
+        "titleHighlight": "Unprecedented Standards",
+        "description": "We provide comprehensive solutions for your home maintenance with high professionalism. Our specialized team is ready to serve you 24/7 with a 45-day guarantee!",
+        "primaryButton": "Discover Our Services",
+        "secondaryButton": "Contact Us Now",
+        "features": {
+            "guarantee": "45-Day Guarantee",
+            "emergency": "24/7 Emergency Service"
+        },
+        "testimonial": "We transform your home into a perfect space with expert touch"
+    },
+    "services": {
+        "title": "Our Services",
+        "all": "All Services",
+        "showAll": "Show All Services",
+        "notFound": "Service Not Found",
+        "subServices": "Sub services",
+        "discover_more": "Discover More"
+    },
+    "whyUs": {
+        "title": "✨ Why Choose Us?",
+        "description": "In a fast-paced world, your time is valuable and your comfort is priceless. That's why we're here to provide everything you need for your home maintenance or improvement, without hassle or stress.",
+        "reasons": [
+            "End-to-end service without hassle or extra trips",
+            "Skilled specialists in all fields",
+            "Work guarantee with long-lasting quality",
+            "24/7 emergency service with speed and professionalism",
+            "Fair prices and value for every dirham you spend",
+            "We come to you wherever you are, without delay or complications",
+            "Commitment to cleanliness after every job",
+            "Professional touch that transforms your home before problems arise",
+            "Preparation for events and organization that saves you time"
+        ],
+        "ctaButton": "Book Your Service Now"
+    },
+    "contact": {
+        "title": "Contact Us",
+        "description": "Do you have an inquiry or need help? Our team is ready to answer all your questions",
+        "contactInfo": "Contact Information",
+        "phoneLabel": "Phone",
+        "phoneNumber": "+971 50 123 4567",
+        "emailLabel": "Email",
+        "emailAddress": "info@mfk.com",
+        "addressLabel": "Address",
+        "address": "Sharjah, United Arab Emirates",
+        "mapTitle": "Our Location on Map"
+    },
+    "testimonial": {
+        "title": "What Our Clients Say",
+        "more_customers": "And many more satisfied customers..."
+    },
+    "footer": {
+        "companyName": "MFK",
+        "description": "A company specialized in professional and high-quality home maintenance",
+        "quickLinks": "Quick Links",
+        "home": "Home",
+        "services": "Our Services",
+        "about": "About Us",
+        "contact": "Contact Us",
+        "contactUs": "Contact Us",
+        "phone": "+971 50 123 4567",
+        "email": "info@mfk.com",
+        "followUs": "Follow Us",
+        "copyright": "MFK. All rights reserved"
+    }
+}
