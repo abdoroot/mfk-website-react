@@ -63,7 +63,7 @@ const Contact = () => {
                             </div>
                         </div>
 
-                        <div className="bg-white rounded-lg shadow-md overflow-hidden h-full sm:h-400">
+                        <div className="bg-white rounded-lg shadow-md overflow-hidden h-full">
                             <iframe
                                 className="w-full h-full border-0"
                                 loading="lazy"

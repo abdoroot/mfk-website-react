@@ -25,7 +25,7 @@ const Hero = () => {
                             {t('hero.primaryButton')}
                         </Link>
                         <Link
-                            to={`/${lang}/services`}
+                            to={`/${lang}/contact`}
                             className="bg-white text-mfk-blue border border-mfk-blue px-8 py-3 rounded-lg hover:bg-gray-100 transition text-center"
                         >
                             {t('hero.secondaryButton')}
