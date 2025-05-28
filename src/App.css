@@ -3,8 +3,8 @@
 @import "tailwindcss";
 
 @theme {
-    --color-mfk-yellow: #ffca08;
-    --color-mfk-blue: #2065b0;
+  --color-mfk-yellow: #ffca08;
+  --color-mfk-blue: #2065b0;
 }
 
 :root {
@@ -28,6 +28,6 @@ body {
 }
 
 #nprogress .bar {
-  background: #ef4444 !important;
-  /* Tailwind's red-500 */
+  background: #ffca08 !important;
+  height: 5px !important;
 }

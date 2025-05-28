@@ -32,7 +32,7 @@ const WhyUs = () => {
 
         <div className="mt-10">
           <Link
-            href="/contact"
+            to={`/${lang}/contact`}
             className="text-white border bg-mfk-blue px-8 py-3 rounded-lg transition text-center"
           >
             {t('whyUs.ctaButton')}
