@@ -31,7 +31,7 @@ const ServiceDetails = () => {
         <DefaultLayout>
             <section className="py-16 bg-gray-100">
                 <div className="container mx-auto px-4 text-center">
-                    <h3 className="text-3xl font-bold mb-6">
+                    <h3 className="text-3xl font-bold mb-6 text-mfk-blue">
                         {lang === 'ar' ? selectedService.title : selectedService.title_en}
                     </h3>
                     <img
@@ -42,24 +42,24 @@ const ServiceDetails = () => {
                         className="mx-auto mb-6"
                         loading="lazy"
                     />
-                    <p className="text-lg text-gray-700 mb-10">
+                    <p className="text-lg text-gray-500 mb-10">
                         {lang === 'ar' ? selectedService.description : selectedService.description_en}
                     </p>
 
                     {relatedSubcategories.length > 0 && (
                         <>
-                            <h4 className="text-2xl font-semibold mb-6">{t('services.subServices')}</h4>
+                            <h4 className="text-2xl font-semibold mb-6 text-mfk-blue">{t('services.subServices')}</h4>
                             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                                 {relatedSubcategories.map((sub, index) => (
                                     <div
                                         key={index}
-                                        className="bg-white rounded-lg p-6 shadow hover:shadow-lg transition-shadow"
+                                        className="bg-white rounded-lg p-6 shadow hover:shadow-lg transition-shadow text-mfk-blue"
                                         onClick={() => navigate(`/${lang}/services/${serviceId}/${sub.id}`)}
                                     >
                                         <h5 className="text-lg font-semibold mb-2">
                                             {lang === 'ar' ? sub.title : sub.title_en}
                                         </h5>
-                                        <p className="text-sm text-gray-600">
+                                        <p className="text-sm text-gray-500">
                                             {lang === 'ar' ? sub.description : sub.description_en}
                                         </p>
                                     </div>
