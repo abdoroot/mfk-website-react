@@ -29,7 +29,7 @@ const ServicesPage = () => {
                                         className="h-25 mx-auto mb-4"
                                     />
                                     <h4 className="text-xl font-semibold mb-2 text-mfk-blue ">{lang == 'ar' ? service.title : service.title_en}</h4>
-                                    <p className="text-gray-500">{lang == 'ar' ? service.description.slice(0, 120) : service.description_en.slice(0, 120)}...</p>
+                                    <p className="text-gray-700">{lang == 'ar' ? service.description.slice(0, 120) : service.description_en.slice(0, 120)}...</p>
                                     <span className="text-mfk-yellow font-bold underline hover:text-mfk-yellow transition-colors">
                                         {t("services.discover_more")}
                                     </span>

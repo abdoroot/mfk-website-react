@@ -42,7 +42,7 @@ const ServiceDetails = () => {
                         className="mx-auto mb-6"
                         loading="lazy"
                     />
-                    <p className="text-lg text-gray-500 mb-10">
+                    <p className="text-lg text-gray-700 mb-10">
                         {lang === 'ar' ? selectedService.description : selectedService.description_en}
                     </p>
 
@@ -59,7 +59,7 @@ const ServiceDetails = () => {
                                         <h5 className="text-lg font-semibold mb-2">
                                             {lang === 'ar' ? sub.title : sub.title_en}
                                         </h5>
-                                        <p className="text-sm text-gray-500">
+                                        <p className="text-sm text-gray-700">
                                             {lang === 'ar' ? sub.description : sub.description_en}
                                         </p>
                                     </div>
