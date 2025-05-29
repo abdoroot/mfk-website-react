@@ -1,4 +1,3 @@
-'use client';
 import DefaultLayout from '@/layouts/DefaultLayout';
 import useTranslation from '@/hooks/useTranslation';
 
@@ -7,19 +6,33 @@ const About = () => {
 
     return (
         <DefaultLayout>
-            <section id="About" className="py-16 bg-mfk-blue/5">
-                <div className="container mx-auto px-4">
-                    <div className="text-center mb-12">
-                        <h2 className="text-3xl font-bold text-mfk-blue mb-4">
-                            {t('contact.title')}
-                        </h2>
-                        <p className="text-gray-700 max-w-2xl mx-auto">
-                            {t('contact.description')}
+            <section className="py-16 bg-mfk-blue/5">
+                <div className="container mx-auto px-4 max-w-6xl">
+                    {/* Hero Header */}
+                    <div className="text-center mb-8">
+                        <h1 className="text-4xl font-bold text-mfk-blue mb-4">
+                            {t('about.title')}
+                        </h1>
+                        <p className=" text-gray-500 max-w-3xl mx-auto">
+                            {t('about.subtitle')}
                         </p>
                     </div>
 
-                    <div className="grid" dir={lang == 'ar' ? 'rtl' : 'ltr'}>
-
+                    <div className="bg-white rounded-xl shadow-md px-8 py-4 mb-12">
+                        <div className="flex flex-col md:flex-row gap-8 items-center">
+                            <div className="md:w-1/2">
+                                <h2 className="text-2xl font-bold text-mfk-blue mb-4">
+                                    {t('about.ourStory.title')}
+                                </h2>
+                                <p className="text-gray-700 mb-4">
+                                    {t('about.ourStory.paragraph1')}
+                                </p>
+                                <p className="text-gray-700">
+                                    {t('about.ourStory.paragraph2')}
+                                </p>
+                            </div>
+                          
+                        </div>
                     </div>
                 </div>
             </section>

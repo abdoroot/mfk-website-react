@@ -59,6 +59,15 @@
         "title": "What Our Clients Say",
         "more_customers": "And many more satisfied customers..."
     },
+    "about": {
+        "title": "About Mfk",
+        "subtitle": "Professional Home Maintenance with Unmatched Quality Standards",
+        "ourStory": {
+            "title": "Our Story",
+            "paragraph1": "Mfk was founded in Sharjah with a simple vision: to keep every home in top condition—without hassle or stress. From day one, we prioritized customer comfort and service quality. That’s why we focused on delivering professional maintenance solutions, including AC cleaning, plumbing, electrical work, painting, interior finishes, and insulation — fast, reliable, and headache-free.",
+            "paragraph2": "Today, we proudly serve hundreds of homes across the UAE. Most of our customers return for more services and recommend us to their families and friends. With every visit, we prove that quality isn’t just a promise — it’s something you can feel from the first interaction. No matter how much we grow, we’ll always listen closely and serve you like you’re our very first customer."
+        }
+    },
     "footer": {
         "companyName": "MFK",
         "description": "A company specialized in professional and high-quality home maintenance",
