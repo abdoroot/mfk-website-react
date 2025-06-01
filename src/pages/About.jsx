@@ -31,9 +31,30 @@ const About = () => {
                                     {t('about.ourStory.paragraph2')}
                                 </p>
                             </div>
-                          
+
                         </div>
                     </div>
+
+                    {/* Commercial License Section */}
+                    <div className="bg-white rounded-xl shadow-md px-8 py-6 mb-12">
+                        <div>
+                            <h2 className="text-2xl font-bold text-mfk-blue mb-4">
+                                {t('about.license.title')}
+                            </h2>
+                            <p className="text-gray-700 mb-4">
+                                {t('about.license.description')}
+                            </p>
+                            <a
+                                href="/documents/TradeLicense.pdf"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="bg-mfk-yellow text-mfk-blue font-bold px-6 py-3 rounded-md hover:bg-opacity-90 transition inline-block"
+                            >
+                                {t('about.license.download')}
+                            </a>
+                        </div>
+                    </div>
+
                 </div>
             </section>
         </DefaultLayout>

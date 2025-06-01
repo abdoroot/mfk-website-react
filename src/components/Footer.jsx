@@ -22,6 +22,7 @@ const Footer = () => {
                             {/* <h3 className="text-xl font-bold">{t('footer.companyName')}</h3> */}
                         </div>
                         <p className="text-sm">{t('footer.description')}</p>
+                        <p className="text-sm">{t('footer.tradeLicense')}</p>
                     </div>
 
                     {/* Column 2: Quick as */}

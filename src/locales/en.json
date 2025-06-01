@@ -66,6 +66,11 @@
             "title": "Our Story",
             "paragraph1": "Mfk was founded in Sharjah with a simple vision: to keep every home in top condition—without hassle or stress. From day one, we prioritized customer comfort and service quality. That’s why we focused on delivering professional maintenance solutions, including AC cleaning, plumbing, electrical work, painting, interior finishes, and insulation — fast, reliable, and headache-free.",
             "paragraph2": "Today, we proudly serve hundreds of homes across the UAE. Most of our customers return for more services and recommend us to their families and friends. With every visit, we prove that quality isn’t just a promise — it’s something you can feel from the first interaction. No matter how much we grow, we’ll always listen closely and serve you like you’re our very first customer."
+        },
+        "license": {
+            "title": "Commercial License",
+            "description": "We are a licensed and officially registered company in the United Arab Emirates under license number: 801400, ensuring our commitment to legal and professional standards in all our services.",
+            "download": "Download a copy of the license"
         }
     },
     "privacy": {
@@ -111,6 +116,7 @@
         "phone": "0555536116",
         "email": "info@mfk.com",
         "followUs": "Follow Us",
+        "tradeLicense": "Trade License: No. 801400 – Issued by the Sharjah Department of Economic Development.",
         "copyright": "MFK. All rights reserved"
     }
 }
