@@ -1,4 +1,4 @@
-export default function WhatsAppButton({ phone = '971500000000', message = 'مرحباً، أحتاج إلى المساعدة' }) {
+export default function WhatsAppButton({ phone = '971555536116', message = 'السلام عليكم، شفت موقعكم وحاب أعرف أكثر عن خدماتكم، ممكن تفيدوني؟' }) {
     const whatsappUrl = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
 
     return (

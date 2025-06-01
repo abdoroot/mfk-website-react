@@ -48,7 +48,7 @@
         "description": "Do you have an inquiry or need help? Our team is ready to answer all your questions",
         "contactInfo": "Contact Information",
         "phoneLabel": "Phone",
-        "phoneNumber": "+971 50 123 4567",
+        "phoneNumber": "0555536116",
         "emailLabel": "Email",
         "emailAddress": "info@mfk.com",
         "addressLabel": "Address",
@@ -108,7 +108,7 @@
         "about": "About Us",
         "contact": "Contact Us",
         "contactUs": "Contact Us",
-        "phone": "+971 50 123 4567",
+        "phone": "0555536116",
         "email": "info@mfk.com",
         "followUs": "Follow Us",
         "copyright": "MFK. All rights reserved"
