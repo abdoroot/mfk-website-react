@@ -32,6 +32,7 @@ const Footer = () => {
                             <li><Link to={`/${lang}/services`} className="hover:underline">{t('footer.services')}</Link></li>
                             <li><Link to={`/${lang}/about`} className="hover:underline">{t('footer.about')}</Link></li>
                             <li><Link to={`/${lang}/contact`} className="hover:underline">{t('footer.contact')}</Link></li>
+                            <li><Link to={`/${lang}/privacy-policy`} className="hover:underline">{t('footer.privacyPolicy')}</Link></li>
                         </ul>
                     </div>
 

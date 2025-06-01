@@ -8,6 +8,7 @@ import Services from './pages/Services';
 import ServiceDetails from './pages/ServiceDetails';
 import Contact from './pages/Contact';
 import About from './pages/About';
+import PrivacyPolicy from './pages/PrivacyPolicy';
 import useGTMPageView from '@/components/useGTMPageView';
 
 const RouterContent = () => {
@@ -24,6 +25,7 @@ const RouterContent = () => {
             <Route path="/" element={<Home />} />
             <Route path="/:lang" element={<Home />} />
             <Route path="/:lang/about" element={<About />} />
+            <Route path="/:lang/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="/:lang/contact" element={<Contact />} />
             <Route path="/:lang/services" element={<Services />} />
             <Route path="/:lang/services/:id" element={<ServiceDetails />} />
