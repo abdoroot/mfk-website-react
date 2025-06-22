@@ -11,6 +11,10 @@ const Blog = () => {
         { path: '/jotun-2025-colors', key: 'jotun2025Colors' },
         { path: '/luxury-paints', key: 'luxuryPaints' },
         { path: '/gloss-difference', key: 'glossDifference' },
+        { path: '/lighting-and-color', key: 'lightingAndColor' },
+        { path: '/kid-friendly-colors', key: 'kidFriendlyColors' },
+        { path: '/projects-gallery', key: 'projectsGallery' },
+        { path: '/offwhite-vs-beige', key: 'offwhiteVsBeige' },
     ];
 
     return (
