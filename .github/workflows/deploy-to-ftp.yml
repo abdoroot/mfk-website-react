@@ -27,5 +27,5 @@ jobs:
           server: ftp://194.36.184.209
           username: ${{ secrets.MFK_FTP_USER }}
           password: ${{ secrets.MFK_FTP_PASS }}
-          local-dir: ./dist
+          local-dir: ./dist/
 
