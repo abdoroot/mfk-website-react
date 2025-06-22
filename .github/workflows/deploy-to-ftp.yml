@@ -24,7 +24,8 @@ jobs:
       - name: Deploy via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
-          server: ftp.mfk.ae
+          server: 194.36.184.209
+          server-dir: /domains/mfk.ae/public_html
           username: ${{ secrets.MFK_FTP_USER }}
           password: ${{ secrets.MFK_FTP_PASS }}
           local-dir: ./dist/
