@@ -3,14 +3,16 @@ import useTranslation from '@/hooks/useTranslation';
 import Seo from '@/components/Seo';
 
 const About = () => {
-    const { t, lang } = useTranslation();
+    const { t, lang, loading } = useTranslation();
 
     return (
         <DefaultLayout>
-            <Seo
-                title={`${t('about.title')} | ${t('footer.companyName')}`}
-                description={t('about.subtitle')}
-            />
+            {!loading && (
+                <Seo
+                    title={`${t('about.title')} | ${t('footer.companyName')}`}
+                    description={t('about.subtitle')}
+                />
+            )}
             <section className="py-16 bg-mfk-blue/5">
                 <div className="container mx-auto px-4 max-w-6xl">
                     {/* Hero Header */}

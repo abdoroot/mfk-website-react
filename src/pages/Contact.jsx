@@ -4,14 +4,16 @@ import useTranslation from '@/hooks/useTranslation';
 import Seo from '@/components/Seo';
 
 const Contact = () => {
-    const { t, lang } = useTranslation();
+    const { t, lang, loading } = useTranslation();
 
     return (
         <DefaultLayout>
-            <Seo
-                title={`${t('contact.title')} | ${t('footer.companyName')}`}
-                description={t('contact.description')}
-            />
+            {!loading && (
+                <Seo
+                    title={`${t('contact.title')} | ${t('footer.companyName')}`}
+                    description={t('contact.description')}
+                />
+            )}
             <section id="contact" className="py-16 bg-mfk-blue/5">
                 <div className="container mx-auto px-4">
                     <div className="text-center mb-12">

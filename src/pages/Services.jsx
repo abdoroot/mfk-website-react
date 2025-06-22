@@ -7,14 +7,16 @@ import Seo from '@/components/Seo';
 
 
 const ServicesPage = () => {
-    const { t, lang } = useTranslation();
+    const { t, lang, loading } = useTranslation();
 
     return (
         <DefaultLayout>
-            <Seo
-                title={`${t('services.all')} | ${t('footer.companyName')}`}
-                description={t('footer.description')}
-            />
+            {!loading && (
+                <Seo
+                    title={`${t('services.all')} | ${t('footer.companyName')}`}
+                    description={t('footer.description')}
+                />
+            )}
             <section id="services" className="py-16 bg-gray-100">
                 <div className="text-center">
                     <h1 className="text-4xl font-bold mb-4 text-mfk-blue">{t('services.all')}</h1>
