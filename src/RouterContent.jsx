@@ -15,6 +15,7 @@ import BrightenYourSpace from './pages/BrightenYourSpace';
 import Jotun2025Colors from './pages/Jotun2025Colors';
 import LuxuryPaints from './pages/LuxuryPaints';
 import GlossDifference from './pages/GlossDifference';
+import Blog from './pages/Blog';
 import useGTMPageView from '@/components/useGTMPageView';
 
 const RouterContent = () => {
@@ -39,6 +40,7 @@ const RouterContent = () => {
             <Route path="/:lang/jotun-2025-colors" element={<Jotun2025Colors />} />
             <Route path="/:lang/luxury-paints" element={<LuxuryPaints />} />
             <Route path="/:lang/gloss-difference" element={<GlossDifference />} />
+            <Route path="/:lang/blog" element={<Blog />} />
             <Route path="/:lang/services" element={<Services />} />
             <Route path="/:lang/services/:id" element={<ServiceDetails />} />
         </Routes>
@@ -46,3 +48,4 @@ const RouterContent = () => {
 }
 
 export default RouterContent;
+

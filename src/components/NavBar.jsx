@@ -34,10 +34,10 @@ const NavBar = () => {
                             <NavItem to={`/${lang}`} text={t('header.home')} />
                             <NavItem to={`/${lang}/services`} text={t('header.services')} />
                             <li className="relative group">
-                                <span className="text-mfk-blue font-bold hover:text-mfk-blue/80 transition-colors cursor-pointer">
+                                <Link to={`/${lang}/blog`} className="text-mfk-blue font-bold hover:text-mfk-blue/80 transition-colors">
                                     {t('header.blog')}
-                                </span>
-                                <ul className="absolute hidden group-hover:block bg-white shadow-md rounded-md mt-2 min-w-[10rem] z-10">
+                                </Link>
+                                <ul className="absolute left-0 top-full pt-2 hidden group-hover:block bg-white shadow-md rounded-md min-w-[10rem] z-10">
                                     <li><Link to={`/${lang}/colors`} className="block px-4 py-2 hover:bg-mfk-blue/10 whitespace-nowrap">{t('header.colorsGuide')}</Link></li>
                                     <li><Link to={`/${lang}/room-colors`} className="block px-4 py-2 hover:bg-mfk-blue/10 whitespace-nowrap">{t('header.roomColors')}</Link></li>
                                     <li><Link to={`/${lang}/brighten-your-space`} className="block px-4 py-2 hover:bg-mfk-blue/10 whitespace-nowrap">{t('header.brightenYourSpace')}</Link></li>
@@ -77,7 +77,7 @@ const NavBar = () => {
                         <ul className="flex flex-col gap-4">
                             <MobileNavItem to={`/${lang}`} text={t('header.home')} onClick={toggleMenu} />
                             <MobileNavItem to={`/${lang}/services`} text={t('header.services')} onClick={toggleMenu} />
-                            <li className="px-4 font-bold text-mfk-blue">{t('header.blog')}</li>
+                            <MobileNavItem to={`/${lang}/blog`} text={t('header.blog')} onClick={toggleMenu} />
                             <MobileNavItem to={`/${lang}/colors`} text={t('header.colorsGuide')} onClick={toggleMenu} />
                             <MobileNavItem to={`/${lang}/room-colors`} text={t('header.roomColors')} onClick={toggleMenu} />
                             <MobileNavItem to={`/${lang}/brighten-your-space`} text={t('header.brightenYourSpace')} onClick={toggleMenu} />
