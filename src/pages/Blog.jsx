@@ -1,5 +1,6 @@
 import DefaultLayout from '@/layouts/DefaultLayout';
 import useTranslation from '@/hooks/useTranslation';
+import Seo from '@/components/Seo';
 import { Link } from 'react-router-dom';
 
 const Blog = () => {
@@ -19,6 +20,10 @@ const Blog = () => {
 
     return (
         <DefaultLayout>
+            <Seo
+                title={`${t('blog.title')} | ${t('footer.companyName')}`}
+                description={t('blog.intro')}
+            />
             <section className="py-16 bg-mfk-blue/5">
                 <div className="container mx-auto px-4 max-w-4xl">
                     <h1 className="text-3xl font-bold text-mfk-blue mb-8 text-center">

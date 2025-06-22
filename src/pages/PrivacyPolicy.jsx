@@ -1,5 +1,6 @@
 import DefaultLayout from '@/layouts/DefaultLayout';
 import useTranslation from '@/hooks/useTranslation';
+import Seo from '@/components/Seo';
 
 const PrivacyPolicy = () => {
     const { t } = useTranslation();
@@ -9,6 +10,10 @@ const PrivacyPolicy = () => {
 
     return (
         <DefaultLayout>
+            <Seo
+                title={`${t('privacy.title')} | ${t('footer.companyName')}`}
+                description={t('privacy.subtitle')}
+            />
             <section className="py-16 bg-mfk-blue/5">
                 <div className="container mx-auto px-4 max-w-6xl">
                     {/* Hero Header */}
