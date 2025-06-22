@@ -33,6 +33,7 @@ const NavBar = () => {
                         <ul className="hidden md:flex gap-6 items-center">
                             <NavItem to={`/${lang}`} text={t('header.home')} />
                             <NavItem to={`/${lang}/services`} text={t('header.services')} />
+                            <NavItem to={`/${lang}/colors`} text={t('header.colors')} />
                             <NavItem to={`/${lang}#whyus`} text={t('header.whyus')} />
                             <NavItem to={`/${lang}#testimonials`} text={t('header.testimonials')} />
                             <NavItem to={`/${lang}/contact`} text={t('header.contact')} />
@@ -64,6 +65,7 @@ const NavBar = () => {
                         <ul className="flex flex-col gap-4">
                             <MobileNavItem to={`/${lang}`} text={t('header.home')} onClick={toggleMenu} />
                             <MobileNavItem to={`/${lang}/services`} text={t('header.services')} onClick={toggleMenu} />
+                            <MobileNavItem to={`/${lang}/colors`} text={t('header.colors')} onClick={toggleMenu} />
                             <MobileNavItem to={`/${lang}#whyus`} text={t('header.whyus')} onClick={toggleMenu} />
                             <MobileNavItem to={`/${lang}#testimonials`} text={t('header.testimonials')} onClick={toggleMenu} />
                             <MobileNavItem to={`/${lang}/contact`} text={t('header.contact')} onClick={toggleMenu} />
