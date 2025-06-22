@@ -6,9 +6,17 @@ import LanguageSwitcher from './LanguageSwitcher';
 const NavBar = () => {
     const { t, lang } = useTranslation();
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [isBlogMenuOpen, setIsBlogMenuOpen] = useState(false);
 
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
+        if (isMenuOpen) {
+            setIsBlogMenuOpen(false);
+        }
+    };
+
+    const toggleBlogMenu = () => {
+        setIsBlogMenuOpen(!isBlogMenuOpen);
     };
 
     return (
@@ -77,13 +85,33 @@ const NavBar = () => {
                         <ul className="flex flex-col gap-4">
                             <MobileNavItem to={`/${lang}`} text={t('header.home')} onClick={toggleMenu} />
                             <MobileNavItem to={`/${lang}/services`} text={t('header.services')} onClick={toggleMenu} />
-                            <MobileNavItem to={`/${lang}/blog`} text={t('header.blog')} onClick={toggleMenu} />
-                            <MobileNavItem to={`/${lang}/colors`} text={t('header.colorsGuide')} onClick={toggleMenu} />
-                            <MobileNavItem to={`/${lang}/room-colors`} text={t('header.roomColors')} onClick={toggleMenu} />
-                            <MobileNavItem to={`/${lang}/brighten-your-space`} text={t('header.brightenYourSpace')} onClick={toggleMenu} />
-                            <MobileNavItem to={`/${lang}/jotun-2025-colors`} text={t('header.jotun2025Colors')} onClick={toggleMenu} />
-                            <MobileNavItem to={`/${lang}/luxury-paints`} text={t('header.luxuryPaints')} onClick={toggleMenu} />
-                            <MobileNavItem to={`/${lang}/gloss-difference`} text={t('header.glossDifference')} onClick={toggleMenu} />
+                            <li>
+                                <button
+                                    onClick={toggleBlogMenu}
+                                    className="flex justify-between items-center w-full py-2 px-4 font-medium text-mfk-blue hover:bg-mfk-blue/10 rounded transition-colors"
+                                >
+                                    {t('header.blog')}
+                                    <svg
+                                        className={`w-4 h-4 transition-transform ${isBlogMenuOpen ? 'rotate-90' : ''}`}
+                                        fill="none"
+                                        stroke="currentColor"
+                                        viewBox="0 0 24 24"
+                                    >
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                                    </svg>
+                                </button>
+                                {isBlogMenuOpen && (
+                                    <ul className="flex flex-col gap-2 mt-2 pl-4">
+                                        <MobileNavItem to={`/${lang}/blog`} text={t('header.blog')} onClick={toggleMenu} />
+                                        <MobileNavItem to={`/${lang}/colors`} text={t('header.colorsGuide')} onClick={toggleMenu} />
+                                        <MobileNavItem to={`/${lang}/room-colors`} text={t('header.roomColors')} onClick={toggleMenu} />
+                                        <MobileNavItem to={`/${lang}/brighten-your-space`} text={t('header.brightenYourSpace')} onClick={toggleMenu} />
+                                        <MobileNavItem to={`/${lang}/jotun-2025-colors`} text={t('header.jotun2025Colors')} onClick={toggleMenu} />
+                                        <MobileNavItem to={`/${lang}/luxury-paints`} text={t('header.luxuryPaints')} onClick={toggleMenu} />
+                                        <MobileNavItem to={`/${lang}/gloss-difference`} text={t('header.glossDifference')} onClick={toggleMenu} />
+                                    </ul>
+                                )}
+                            </li>
                             <MobileNavItem to={`/${lang}#whyus`} text={t('header.whyus')} onClick={toggleMenu} />
                             <MobileNavItem to={`/${lang}#testimonials`} text={t('header.testimonials')} onClick={toggleMenu} />
                             <MobileNavItem to={`/${lang}/contact`} text={t('header.contact')} onClick={toggleMenu} />
