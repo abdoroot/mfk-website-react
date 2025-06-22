@@ -9,6 +9,7 @@ export default function useTranslation() {
     const lang = pathname.split('/')[1] || 'ar';
     const [translations, setTranslations] = useState({});
     const [loading, setLoading] = useState(true);
+    const ready = !loading && Object.keys(translations).length > 0;
 
     useEffect(() => {
         const loadTranslations = async () => {
@@ -30,9 +31,11 @@ export default function useTranslation() {
     }, [lang]);
 
     const t = (key) => {
-        if (loading) return key; // Return key while loading
-        return key.split('.').reduce((obj, k) => (obj && obj[k] !== undefined ? obj[k] : undefined), translations) || key;
+        if (!ready) return key; // Return key if translations not ready
+        return key
+            .split('.')
+            .reduce((obj, k) => (obj && obj[k] !== undefined ? obj[k] : undefined), translations) || key;
     };
 
-    return { t, lang, loading };
+    return { t, lang, loading, ready };
 }

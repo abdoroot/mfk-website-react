@@ -3,12 +3,15 @@ import ServicesSection from '../components/ServicesSection';
 import WhyUs from '../components/WhyUs';
 import Testimonial from '../components/Testimonial';
 import DefaultLayout from '../layouts/DefaultLayout';
+import Seo from '@/components/Seo';
+import useTranslation from '@/hooks/useTranslation';
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import "../App.css"
 
 const Home = () => {
     const location = useLocation();
+    const { t } = useTranslation();
 
     useEffect(() => {
         const hash = location.hash;
@@ -23,6 +26,10 @@ const Home = () => {
     }, [location.hash]);
     return (
         <DefaultLayout params={{ lang: '' }}>
+            <Seo
+                title="الرئيسية - Home"
+                description={t('hero.description')}
+            />
             <Hero />
             <ServicesSection />
             <WhyUs />

@@ -4,6 +4,7 @@ import subcategories from '@/data/SubCategoryList';
 import DefaultLayout from '@/layouts/DefaultLayout';
 import YellowLink from '@/components/YellowLink';
 import useTranslation from '@/hooks/useTranslation';
+import Seo from '@/components/Seo';
 
 const ServiceDetails = () => {
     const { id, lang } = useParams();
@@ -29,6 +30,10 @@ const ServiceDetails = () => {
 
     return (
         <DefaultLayout>
+            <Seo
+                title={`${selectedService.title} - ${selectedService.title_en}`}
+                description={lang === 'ar' ? selectedService.description : selectedService.description_en}
+            />
             <section className="py-16 bg-gray-100">
                 <div className="container mx-auto px-4 text-center">
                     <h3 className="text-3xl font-bold mb-6 text-mfk-blue">

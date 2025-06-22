@@ -1,12 +1,17 @@
 'use client';
 import DefaultLayout from '@/layouts/DefaultLayout';
 import useTranslation from '@/hooks/useTranslation';
+import Seo from '@/components/Seo';
 
 const Contact = () => {
     const { t, lang } = useTranslation();
 
     return (
         <DefaultLayout>
+            <Seo
+                title="اتصل بنا - Contact"
+                description={t('contact.description')}
+            />
             <section id="contact" className="py-16 bg-mfk-blue/5">
                 <div className="container mx-auto px-4">
                     <div className="text-center mb-12">
