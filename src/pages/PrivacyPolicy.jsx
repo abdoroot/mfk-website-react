@@ -3,14 +3,14 @@ import useTranslation from '@/hooks/useTranslation';
 import Seo from '@/components/Seo';
 
 const PrivacyPolicy = () => {
-    const { t, loading } = useTranslation();
+    const { t, ready } = useTranslation();
 
     const sections = t('privacy.sections');
 
 
     return (
         <DefaultLayout>
-            {!loading && (
+            {ready && (
                 <Seo
                     title={`${t('privacy.title')} | ${t('footer.companyName')}`}
                     description={t('privacy.subtitle')}

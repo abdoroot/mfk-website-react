@@ -4,7 +4,7 @@ import Seo from '@/components/Seo';
 import { Link } from 'react-router-dom';
 
 const Blog = () => {
-    const { t, lang, loading } = useTranslation();
+    const { t, lang, ready } = useTranslation();
     const posts = [
         { path: '/colors', key: 'colorsGuide' },
         { path: '/room-colors', key: 'roomColors' },
@@ -20,7 +20,7 @@ const Blog = () => {
 
     return (
         <DefaultLayout>
-            {!loading && (
+            {ready && (
                 <Seo
                     title={`${t('blog.title')} | ${t('footer.companyName')}`}
                     description={t('blog.intro')}

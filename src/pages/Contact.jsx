@@ -4,11 +4,11 @@ import useTranslation from '@/hooks/useTranslation';
 import Seo from '@/components/Seo';
 
 const Contact = () => {
-    const { t, lang, loading } = useTranslation();
+    const { t, lang, ready } = useTranslation();
 
     return (
         <DefaultLayout>
-            {!loading && (
+            {ready && (
                 <Seo
                     title={`${t('contact.title')} | ${t('footer.companyName')}`}
                     description={t('contact.description')}

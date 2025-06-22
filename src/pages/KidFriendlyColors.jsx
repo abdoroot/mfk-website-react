@@ -3,10 +3,10 @@ import useTranslation from '@/hooks/useTranslation';
 import Seo from '@/components/Seo';
 
 const KidFriendlyColors = () => {
-    const { t, loading } = useTranslation();
+    const { t, ready } = useTranslation();
     return (
         <DefaultLayout>
-            {!loading && (
+            {ready && (
                 <Seo
                     title={`${t('blogPages.kidFriendlyColors.title')} | ${t('footer.companyName')}`}
                     description={t('blogPages.kidFriendlyColors.content')}

@@ -3,10 +3,10 @@ import useTranslation from '@/hooks/useTranslation';
 import Seo from '@/components/Seo';
 
 const ProjectsGallery = () => {
-    const { t, loading } = useTranslation();
+    const { t, ready } = useTranslation();
     return (
         <DefaultLayout>
-            {!loading && (
+            {ready && (
                 <Seo
                     title={`${t('blogPages.projectsGallery.title')} | ${t('footer.companyName')}`}
                     description={t('blogPages.projectsGallery.content')}

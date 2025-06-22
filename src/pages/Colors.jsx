@@ -4,11 +4,11 @@ import useTranslation from '@/hooks/useTranslation';
 import Seo from '@/components/Seo';
 
 const ColorsPage = () => {
-    const { lang, t, loading } = useTranslation();
+    const { lang, t, ready } = useTranslation();
 
     return (
         <DefaultLayout>
-            {!loading && (
+            {ready && (
                 <Seo
                     title={`${t('colors.title')} | ${t('footer.companyName')}`}
                     description={t('footer.description')}

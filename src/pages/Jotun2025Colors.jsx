@@ -3,10 +3,10 @@ import useTranslation from '@/hooks/useTranslation';
 import Seo from '@/components/Seo';
 
 const Jotun2025Colors = () => {
-    const { t, loading } = useTranslation();
+    const { t, ready } = useTranslation();
     return (
         <DefaultLayout>
-            {!loading && (
+            {ready && (
                 <Seo
                     title={`${t('blogPages.jotun2025Colors.title')} | ${t('footer.companyName')}`}
                     description={t('blogPages.jotun2025Colors.content')}

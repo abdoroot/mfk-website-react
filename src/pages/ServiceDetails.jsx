@@ -15,7 +15,7 @@ const ServiceDetails = () => {
         (sub) => sub.category_id === serviceId
     );
 
-    const { t, loading } = useTranslation();
+    const { t, ready } = useTranslation();
 
     if (!selectedService) {
         return (
@@ -30,7 +30,7 @@ const ServiceDetails = () => {
 
     return (
         <DefaultLayout>
-            {!loading && (
+            {ready && (
                 <Seo
                     title={`${lang === 'ar' ? selectedService.title : selectedService.title_en} | ${t('footer.companyName')}`}
                     description={lang === 'ar' ? selectedService.description : selectedService.description_en}

@@ -3,10 +3,10 @@ import useTranslation from '@/hooks/useTranslation';
 import Seo from '@/components/Seo';
 
 const OffwhiteVsBeige = () => {
-    const { t, loading } = useTranslation();
+    const { t, ready } = useTranslation();
     return (
         <DefaultLayout>
-            {!loading && (
+            {ready && (
                 <Seo
                     title={`${t('blogPages.offwhiteVsBeige.title')} | ${t('footer.companyName')}`}
                     description={t('blogPages.offwhiteVsBeige.content')}

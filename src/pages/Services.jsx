@@ -7,11 +7,11 @@ import Seo from '@/components/Seo';
 
 
 const ServicesPage = () => {
-    const { t, lang, loading } = useTranslation();
+    const { t, lang, ready } = useTranslation();
 
     return (
         <DefaultLayout>
-            {!loading && (
+            {ready && (
                 <Seo
                     title={`${t('services.all')} | ${t('footer.companyName')}`}
                     description={t('footer.description')}
