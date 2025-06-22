@@ -15,6 +15,10 @@ import BrightenYourSpace from './pages/BrightenYourSpace';
 import Jotun2025Colors from './pages/Jotun2025Colors';
 import LuxuryPaints from './pages/LuxuryPaints';
 import GlossDifference from './pages/GlossDifference';
+import LightingAndColor from './pages/LightingAndColor';
+import KidFriendlyColors from './pages/KidFriendlyColors';
+import ProjectsGallery from './pages/ProjectsGallery';
+import OffwhiteVsBeige from './pages/OffwhiteVsBeige';
 import Blog from './pages/Blog';
 import useGTMPageView from '@/components/useGTMPageView';
 
@@ -40,6 +44,10 @@ const RouterContent = () => {
             <Route path="/:lang/jotun-2025-colors" element={<Jotun2025Colors />} />
             <Route path="/:lang/luxury-paints" element={<LuxuryPaints />} />
             <Route path="/:lang/gloss-difference" element={<GlossDifference />} />
+            <Route path="/:lang/lighting-and-color" element={<LightingAndColor />} />
+            <Route path="/:lang/kid-friendly-colors" element={<KidFriendlyColors />} />
+            <Route path="/:lang/projects-gallery" element={<ProjectsGallery />} />
+            <Route path="/:lang/offwhite-vs-beige" element={<OffwhiteVsBeige />} />
             <Route path="/:lang/blog" element={<Blog />} />
             <Route path="/:lang/services" element={<Services />} />
             <Route path="/:lang/services/:id" element={<ServiceDetails />} />

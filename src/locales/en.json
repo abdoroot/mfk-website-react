@@ -13,7 +13,11 @@
     "brightenYourSpace": "Brighten Your Space",
     "jotun2025Colors": "Jotun 2025 Colors",
     "luxuryPaints": "Luxury Paints",
-    "glossDifference": "Quarter vs Half Gloss"
+    "glossDifference": "Quarter vs Half Gloss",
+    "lightingAndColor": "Lighting and Color",
+    "kidFriendlyColors": "Kid-friendly Colors",
+    "projectsGallery": "Projects Gallery",
+    "offwhiteVsBeige": "Off-white vs Beige"
   },
   "hero": {
     "title": "Home Maintenance With",
@@ -151,6 +155,22 @@
     "glossDifference": {
       "title": "Quarter vs Half Gloss",
       "content": "Difference between Jotun quarter-gloss and half-gloss finishes."
+    },
+    "lightingAndColor": {
+      "title": "How to Choose Colors by Lighting Type?",
+      "content": "Effect of natural, fluorescent, and LED lighting on each color.\nReal-life examples with photos.\nShowcase 3 colors for each lighting type."
+    },
+    "kidFriendlyColors": {
+      "title": "Easy-to-clean Colors for Kids",
+      "content": "Colors that hide dirt easily.\nPhotos of modern kids' rooms with matching Jotun shades.\nExtra point: suitable paint finish (matte \u2013 easy clean)."
+    },
+    "projectsGallery": {
+      "title": "Before/After – Real Paint Project",
+      "content": "Showcase of real executed projects.\nBefore and after photos from the same angle.\nLinks to the used colors."
+    },
+    "offwhiteVsBeige": {
+      "title": "Off-white vs Beige",
+      "content": "Comparison with examples and images.\nUses of each color.\nSlide for each type: Pure Off-white – Warm Beige – Greige."
     }
   }
   ,
