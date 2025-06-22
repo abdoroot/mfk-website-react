@@ -33,7 +33,19 @@ const NavBar = () => {
                         <ul className="hidden md:flex gap-6 items-center">
                             <NavItem to={`/${lang}`} text={t('header.home')} />
                             <NavItem to={`/${lang}/services`} text={t('header.services')} />
-                            <NavItem to={`/${lang}/colors`} text={t('header.colors')} />
+                            <li className="relative group">
+                                <span className="text-mfk-blue font-bold hover:text-mfk-blue/80 transition-colors cursor-pointer">
+                                    {t('header.blog')}
+                                </span>
+                                <ul className="absolute hidden group-hover:block bg-white shadow-md rounded-md mt-2 min-w-[10rem] z-10">
+                                    <li><Link to={`/${lang}/colors`} className="block px-4 py-2 hover:bg-mfk-blue/10 whitespace-nowrap">{t('header.colorsGuide')}</Link></li>
+                                    <li><Link to={`/${lang}/room-colors`} className="block px-4 py-2 hover:bg-mfk-blue/10 whitespace-nowrap">{t('header.roomColors')}</Link></li>
+                                    <li><Link to={`/${lang}/brighten-your-space`} className="block px-4 py-2 hover:bg-mfk-blue/10 whitespace-nowrap">{t('header.brightenYourSpace')}</Link></li>
+                                    <li><Link to={`/${lang}/jotun-2025-colors`} className="block px-4 py-2 hover:bg-mfk-blue/10 whitespace-nowrap">{t('header.jotun2025Colors')}</Link></li>
+                                    <li><Link to={`/${lang}/luxury-paints`} className="block px-4 py-2 hover:bg-mfk-blue/10 whitespace-nowrap">{t('header.luxuryPaints')}</Link></li>
+                                    <li><Link to={`/${lang}/gloss-difference`} className="block px-4 py-2 hover:bg-mfk-blue/10 whitespace-nowrap">{t('header.glossDifference')}</Link></li>
+                                </ul>
+                            </li>
                             <NavItem to={`/${lang}#whyus`} text={t('header.whyus')} />
                             <NavItem to={`/${lang}#testimonials`} text={t('header.testimonials')} />
                             <NavItem to={`/${lang}/contact`} text={t('header.contact')} />
@@ -65,7 +77,13 @@ const NavBar = () => {
                         <ul className="flex flex-col gap-4">
                             <MobileNavItem to={`/${lang}`} text={t('header.home')} onClick={toggleMenu} />
                             <MobileNavItem to={`/${lang}/services`} text={t('header.services')} onClick={toggleMenu} />
-                            <MobileNavItem to={`/${lang}/colors`} text={t('header.colors')} onClick={toggleMenu} />
+                            <li className="px-4 font-bold text-mfk-blue">{t('header.blog')}</li>
+                            <MobileNavItem to={`/${lang}/colors`} text={t('header.colorsGuide')} onClick={toggleMenu} />
+                            <MobileNavItem to={`/${lang}/room-colors`} text={t('header.roomColors')} onClick={toggleMenu} />
+                            <MobileNavItem to={`/${lang}/brighten-your-space`} text={t('header.brightenYourSpace')} onClick={toggleMenu} />
+                            <MobileNavItem to={`/${lang}/jotun-2025-colors`} text={t('header.jotun2025Colors')} onClick={toggleMenu} />
+                            <MobileNavItem to={`/${lang}/luxury-paints`} text={t('header.luxuryPaints')} onClick={toggleMenu} />
+                            <MobileNavItem to={`/${lang}/gloss-difference`} text={t('header.glossDifference')} onClick={toggleMenu} />
                             <MobileNavItem to={`/${lang}#whyus`} text={t('header.whyus')} onClick={toggleMenu} />
                             <MobileNavItem to={`/${lang}#testimonials`} text={t('header.testimonials')} onClick={toggleMenu} />
                             <MobileNavItem to={`/${lang}/contact`} text={t('header.contact')} onClick={toggleMenu} />

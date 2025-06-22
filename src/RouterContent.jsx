@@ -10,6 +10,11 @@ import Colors from './pages/Colors';
 import Contact from './pages/Contact';
 import About from './pages/About';
 import PrivacyPolicy from './pages/PrivacyPolicy';
+import RoomColors from './pages/RoomColors';
+import BrightenYourSpace from './pages/BrightenYourSpace';
+import Jotun2025Colors from './pages/Jotun2025Colors';
+import LuxuryPaints from './pages/LuxuryPaints';
+import GlossDifference from './pages/GlossDifference';
 import useGTMPageView from '@/components/useGTMPageView';
 
 const RouterContent = () => {
@@ -29,6 +34,11 @@ const RouterContent = () => {
             <Route path="/:lang/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="/:lang/contact" element={<Contact />} />
             <Route path="/:lang/colors" element={<Colors />} />
+            <Route path="/:lang/room-colors" element={<RoomColors />} />
+            <Route path="/:lang/brighten-your-space" element={<BrightenYourSpace />} />
+            <Route path="/:lang/jotun-2025-colors" element={<Jotun2025Colors />} />
+            <Route path="/:lang/luxury-paints" element={<LuxuryPaints />} />
+            <Route path="/:lang/gloss-difference" element={<GlossDifference />} />
             <Route path="/:lang/services" element={<Services />} />
             <Route path="/:lang/services/:id" element={<ServiceDetails />} />
         </Routes>

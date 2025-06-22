@@ -6,7 +6,14 @@
     "whyus": "Why Us",
     "testimonials": "Testimonials",
     "contact": "Contact",
-    "colors": "Colors"
+    "colors": "Colors",
+    "blog": "Blog",
+    "colorsGuide": "Colors Guide",
+    "roomColors": "Room Colors",
+    "brightenYourSpace": "Brighten Your Space",
+    "jotun2025Colors": "Jotun 2025 Colors",
+    "luxuryPaints": "Luxury Paints",
+    "glossDifference": "Quarter vs Half Gloss"
   },
   "hero": {
     "title": "Home Maintenance With",
@@ -123,5 +130,27 @@
   },
   "colors": {
     "title": "Color Palette"
+  },
+  "blogPages": {
+    "roomColors": {
+      "title": "Best Colors by Room Type",
+      "content": "Suitable colors for bedroom, living room, majlis, kitchen. Short video or before/after images. Links to suggested colors."
+    },
+    "brightenYourSpace": {
+      "title": "Colors That Broaden Spaces",
+      "content": "Five colors that make areas feel wider. Comparisons before and after. Effect of natural light."
+    },
+    "jotun2025Colors": {
+      "title": "Jotun 2025 Catalog",
+      "content": "Classification of top Jotun shades of the year with images, codes and names, and what makes each special."
+    },
+    "luxuryPaints": {
+      "title": "Luxury Paints",
+      "content": "Showcase of elegant decors. Tips for matching colors and paint texture."
+    },
+    "glossDifference": {
+      "title": "Quarter vs Half Gloss",
+      "content": "Difference between Jotun quarter-gloss and half-gloss finishes."
+    }
   }
 }
