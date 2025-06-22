@@ -1,122 +1,127 @@
 {
-    "header": {
-        "home": "Home",
-        "services": "Services",
-        "about": "About Us",
-        "whyus": "Why Us",
-        "testimonials": "Testimonials",
-        "contact": "Contact"
+  "header": {
+    "home": "Home",
+    "services": "Services",
+    "about": "About Us",
+    "whyus": "Why Us",
+    "testimonials": "Testimonials",
+    "contact": "Contact",
+    "colors": "Colors"
+  },
+  "hero": {
+    "title": "Home Maintenance With",
+    "titleHighlight": "Unprecedented Standards",
+    "description": "We provide comprehensive solutions for your home maintenance with high professionalism. Our specialized team is ready to serve you 24/7 with a 45-day guarantee!",
+    "primaryButton": "Discover Our Services",
+    "secondaryButton": "Contact Us Now",
+    "features": {
+      "guarantee": "45-Day Guarantee",
+      "emergency": "24/7 Emergency Service"
     },
-    "hero": {
-        "title": "Home Maintenance With",
-        "titleHighlight": "Unprecedented Standards",
-        "description": "We provide comprehensive solutions for your home maintenance with high professionalism. Our specialized team is ready to serve you 24/7 with a 45-day guarantee!",
-        "primaryButton": "Discover Our Services",
-        "secondaryButton": "Contact Us Now",
-        "features": {
-            "guarantee": "45-Day Guarantee",
-            "emergency": "24/7 Emergency Service"
-        },
-        "testimonial": "We transform your home into a perfect space with expert touch"
+    "testimonial": "We transform your home into a perfect space with expert touch"
+  },
+  "services": {
+    "title": "Our Services",
+    "all": "All Services",
+    "showAll": "Show All Services",
+    "notFound": "Service Not Found",
+    "subServices": "Sub services",
+    "discover_more": "Discover More"
+  },
+  "whyUs": {
+    "title": "✨ Why Choose Us?",
+    "description": "In a fast-paced world, your time is valuable and your comfort is priceless. That's why we're here to provide everything you need for your home maintenance or improvement, without hassle or stress.",
+    "reasons": [
+      "End-to-end service without hassle or extra trips",
+      "Skilled specialists in all fields",
+      "Work guarantee with long-lasting quality",
+      "24/7 emergency service with speed and professionalism",
+      "Fair prices and value for every dirham you spend",
+      "We come to you wherever you are, without delay or complications",
+      "Commitment to cleanliness after every job",
+      "Professional touch that transforms your home before problems arise",
+      "Preparation for events and organization that saves you time"
+    ],
+    "ctaButton": "Book Your Service Now"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "description": "Do you have an inquiry or need help? Our team is ready to answer all your questions",
+    "contactInfo": "Contact Information",
+    "phoneLabel": "Phone",
+    "phoneNumber": "0508191635",
+    "emailLabel": "Email",
+    "emailAddress": "info@mfk.com",
+    "addressLabel": "Address",
+    "address": "Sharjah, United Arab Emirates",
+    "mapTitle": "Our Location on Map"
+  },
+  "testimonial": {
+    "title": "What Our Clients Say",
+    "more_customers": "And many more satisfied customers..."
+  },
+  "about": {
+    "title": "About Mfk",
+    "subtitle": "Professional Home Maintenance with Unmatched Quality Standards",
+    "ourStory": {
+      "title": "Our Story",
+      "paragraph1": "Mfk was founded in Sharjah with a simple vision: to keep every home in top condition—without hassle or stress. From day one, we prioritized customer comfort and service quality. That’s why we focused on delivering professional maintenance solutions, including AC cleaning, plumbing, electrical work, painting, interior finishes, and insulation — fast, reliable, and headache-free.",
+      "paragraph2": "Today, we proudly serve hundreds of homes across the UAE. Most of our customers return for more services and recommend us to their families and friends. With every visit, we prove that quality isn’t just a promise — it’s something you can feel from the first interaction. No matter how much we grow, we’ll always listen closely and serve you like you’re our very first customer."
     },
-    "services": {
-        "title": "Our Services",
-        "all": "All Services",
-        "showAll": "Show All Services",
-        "notFound": "Service Not Found",
-        "subServices": "Sub services",
-        "discover_more": "Discover More"
-    },
-    "whyUs": {
-        "title": "✨ Why Choose Us?",
-        "description": "In a fast-paced world, your time is valuable and your comfort is priceless. That's why we're here to provide everything you need for your home maintenance or improvement, without hassle or stress.",
-        "reasons": [
-            "End-to-end service without hassle or extra trips",
-            "Skilled specialists in all fields",
-            "Work guarantee with long-lasting quality",
-            "24/7 emergency service with speed and professionalism",
-            "Fair prices and value for every dirham you spend",
-            "We come to you wherever you are, without delay or complications",
-            "Commitment to cleanliness after every job",
-            "Professional touch that transforms your home before problems arise",
-            "Preparation for events and organization that saves you time"
-        ],
-        "ctaButton": "Book Your Service Now"
-    },
-    "contact": {
-        "title": "Contact Us",
-        "description": "Do you have an inquiry or need help? Our team is ready to answer all your questions",
-        "contactInfo": "Contact Information",
-        "phoneLabel": "Phone",
-        "phoneNumber": "0508191635",
-        "emailLabel": "Email",
-        "emailAddress": "info@mfk.com",
-        "addressLabel": "Address",
-        "address": "Sharjah, United Arab Emirates",
-        "mapTitle": "Our Location on Map"
-    },
-    "testimonial": {
-        "title": "What Our Clients Say",
-        "more_customers": "And many more satisfied customers..."
-    },
-    "about": {
-        "title": "About Mfk",
-        "subtitle": "Professional Home Maintenance with Unmatched Quality Standards",
-        "ourStory": {
-            "title": "Our Story",
-            "paragraph1": "Mfk was founded in Sharjah with a simple vision: to keep every home in top condition—without hassle or stress. From day one, we prioritized customer comfort and service quality. That’s why we focused on delivering professional maintenance solutions, including AC cleaning, plumbing, electrical work, painting, interior finishes, and insulation — fast, reliable, and headache-free.",
-            "paragraph2": "Today, we proudly serve hundreds of homes across the UAE. Most of our customers return for more services and recommend us to their families and friends. With every visit, we prove that quality isn’t just a promise — it’s something you can feel from the first interaction. No matter how much we grow, we’ll always listen closely and serve you like you’re our very first customer."
-        },
-        "license": {
-            "title": "Commercial License",
-            "description": "We are a licensed and officially registered company in the United Arab Emirates under license number: 801400, ensuring our commitment to legal and professional standards in all our services.",
-            "download": "Download a copy of the license"
-        }
-    },
-    "privacy": {
-        "title": "Privacy Policy",
-        "subtitle": "We respect your privacy and are committed to protecting your personal data. This policy explains how we collect, use, and share your information when you use our services.",
-        "sections": {
-            "information_collection": {
-                "title": "1. Information Collection",
-                "content": "We collect certain personal information when you register on the website or use our services, including:\n\n- Name\n- Phone number\n- Email address"
-            },
-            "information_usage": {
-                "title": "2. Information Usage",
-                "content": "We use the information we collect to improve our services, including:\n\n- Providing technical support and enhancing the user experience\n- Sending updates about our services\n- Analyzing data to improve performance"
-            },
-            "information_sharing": {
-                "title": "3. Information Sharing",
-                "content": "We do not sell or rent your personal information to any third party. However, we may share data with trusted parties for the purpose of analytics and service improvement."
-            },
-            "data_protection": {
-                "title": "4. Data Protection",
-                "content": "We implement strict security measures to protect your data from unauthorized access or unlawful use."
-            },
-            "user_rights": {
-                "title": "5. Your Rights",
-                "content": "You can request to modify or delete your personal data at any time by contacting us."
-            },
-            "policy_changes": {
-                "title": "6. Changes to This Policy",
-                "content": "We reserve the right to update this privacy policy from time to time. You will be notified of any major changes via email or on our website."
-            }
-        }
-    },
-    "footer": {
-        "companyName": "MFK",
-        "description": "A company specialized in professional and high-quality home maintenance",
-        "quickLinks": "Quick Links",
-        "home": "Home",
-        "services": "Our Services",
-        "privacyPolicy": "Privacy Policy",
-        "about": "About Us",
-        "contact": "Contact Us",
-        "contactUs": "Contact Us",
-        "phone": "0508191635",
-        "email": "info@mfk.com",
-        "followUs": "Follow Us",
-        "tradeLicense": "Trade License: No. 801400 – Issued by the Sharjah Department of Economic Development.",
-        "copyright": "MFK. All rights reserved"
+    "license": {
+      "title": "Commercial License",
+      "description": "We are a licensed and officially registered company in the United Arab Emirates under license number: 801400, ensuring our commitment to legal and professional standards in all our services.",
+      "download": "Download a copy of the license"
     }
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "subtitle": "We respect your privacy and are committed to protecting your personal data. This policy explains how we collect, use, and share your information when you use our services.",
+    "sections": {
+      "information_collection": {
+        "title": "1. Information Collection",
+        "content": "We collect certain personal information when you register on the website or use our services, including:\n\n- Name\n- Phone number\n- Email address"
+      },
+      "information_usage": {
+        "title": "2. Information Usage",
+        "content": "We use the information we collect to improve our services, including:\n\n- Providing technical support and enhancing the user experience\n- Sending updates about our services\n- Analyzing data to improve performance"
+      },
+      "information_sharing": {
+        "title": "3. Information Sharing",
+        "content": "We do not sell or rent your personal information to any third party. However, we may share data with trusted parties for the purpose of analytics and service improvement."
+      },
+      "data_protection": {
+        "title": "4. Data Protection",
+        "content": "We implement strict security measures to protect your data from unauthorized access or unlawful use."
+      },
+      "user_rights": {
+        "title": "5. Your Rights",
+        "content": "You can request to modify or delete your personal data at any time by contacting us."
+      },
+      "policy_changes": {
+        "title": "6. Changes to This Policy",
+        "content": "We reserve the right to update this privacy policy from time to time. You will be notified of any major changes via email or on our website."
+      }
+    }
+  },
+  "footer": {
+    "companyName": "MFK",
+    "description": "A company specialized in professional and high-quality home maintenance",
+    "quickLinks": "Quick Links",
+    "home": "Home",
+    "services": "Our Services",
+    "privacyPolicy": "Privacy Policy",
+    "about": "About Us",
+    "contact": "Contact Us",
+    "contactUs": "Contact Us",
+    "phone": "0508191635",
+    "email": "info@mfk.com",
+    "followUs": "Follow Us",
+    "tradeLicense": "Trade License: No. 801400 – Issued by the Sharjah Department of Economic Development.",
+    "copyright": "MFK. All rights reserved",
+    "colors": "Colors"
+  },
+  "colors": {
+    "title": "Color Palette"
+  }
 }

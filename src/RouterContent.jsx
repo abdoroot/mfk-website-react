@@ -6,6 +6,7 @@ import 'nprogress/nprogress.css';
 import Home from './pages/Home';
 import Services from './pages/Services';
 import ServiceDetails from './pages/ServiceDetails';
+import Colors from './pages/Colors';
 import Contact from './pages/Contact';
 import About from './pages/About';
 import PrivacyPolicy from './pages/PrivacyPolicy';
@@ -27,6 +28,7 @@ const RouterContent = () => {
             <Route path="/:lang/about" element={<About />} />
             <Route path="/:lang/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="/:lang/contact" element={<Contact />} />
+            <Route path="/:lang/colors" element={<Colors />} />
             <Route path="/:lang/services" element={<Services />} />
             <Route path="/:lang/services/:id" element={<ServiceDetails />} />
         </Routes>

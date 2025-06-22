@@ -31,6 +31,7 @@ const Footer = () => {
                         <ul className="space-y-2">
                             <li><Link to={`/${lang}`} className="hover:underline">{t('footer.home')}</Link></li>
                             <li><Link to={`/${lang}/services`} className="hover:underline">{t('footer.services')}</Link></li>
+                            <li><Link to={`/${lang}/colors`} className="hover:underline">{t('footer.colors')}</Link></li>
                             <li><Link to={`/${lang}/about`} className="hover:underline">{t('footer.about')}</Link></li>
                             <li><Link to={`/${lang}/contact`} className="hover:underline">{t('footer.contact')}</Link></li>
                             <li><Link to={`/${lang}/privacy-policy`} className="hover:underline">{t('footer.privacyPolicy')}</Link></li>
