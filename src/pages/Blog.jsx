@@ -4,7 +4,7 @@ import Seo from '@/components/Seo';
 import { Link } from 'react-router-dom';
 
 const Blog = () => {
-    const { t, lang, ready } = useTranslation();
+    const { t } = useTranslation();
     const posts = [
         { path: '/colors', key: 'colorsGuide' },
         { path: '/room-colors', key: 'roomColors' },
@@ -20,12 +20,10 @@ const Blog = () => {
 
     return (
         <DefaultLayout>
-            {ready && (
-                <Seo
-                    title={`${t('blog.title')} | ${t('footer.companyName')}`}
-                    description={t('blog.intro')}
-                />
-            )}
+            <Seo
+                title="دليل الألوان - Painting Guides"
+                description={t('blog.intro')}
+            />
             <section className="py-16 bg-mfk-blue/5">
                 <div className="container mx-auto px-4 max-w-4xl">
                     <h1 className="text-3xl font-bold text-mfk-blue mb-8 text-center">

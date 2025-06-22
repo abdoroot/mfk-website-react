@@ -3,15 +3,13 @@ import useTranslation from '@/hooks/useTranslation';
 import Seo from '@/components/Seo';
 
 const OffwhiteVsBeige = () => {
-    const { t, ready } = useTranslation();
+    const { t } = useTranslation();
     return (
         <DefaultLayout>
-            {ready && (
-                <Seo
-                    title={`${t('blogPages.offwhiteVsBeige.title')} | ${t('footer.companyName')}`}
-                    description={t('blogPages.offwhiteVsBeige.content')}
-                />
-            )}
+            <Seo
+                title="ما الفرق بين أوف وايت وبيج؟ - Off-white vs Beige"
+                description={t('blogPages.offwhiteVsBeige.content')}
+            />
             <section className="py-16 bg-mfk-blue/5">
                 <div className="container mx-auto px-4 max-w-4xl">
                     <h1 className="text-3xl font-bold text-mfk-blue mb-4 text-center">

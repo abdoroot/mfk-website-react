@@ -4,16 +4,14 @@ import useTranslation from '@/hooks/useTranslation';
 import Seo from '@/components/Seo';
 
 const ColorsPage = () => {
-    const { lang, t, ready } = useTranslation();
+    const { lang, t } = useTranslation();
 
     return (
         <DefaultLayout>
-            {ready && (
-                <Seo
-                    title={`${t('colors.title')} | ${t('footer.companyName')}`}
-                    description={t('footer.description')}
-                />
-            )}
+            <Seo
+                title="لوحة الألوان - Color Palette"
+                description={t('footer.description')}
+            />
             <section className="py-16 bg-mfk-blue/5">
                 <div className="container mx-auto px-4">
                     <h1 className="text-4xl font-bold text-mfk-blue mb-8 text-center">

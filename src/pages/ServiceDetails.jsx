@@ -15,7 +15,7 @@ const ServiceDetails = () => {
         (sub) => sub.category_id === serviceId
     );
 
-    const { t, ready } = useTranslation();
+    const { t } = useTranslation();
 
     if (!selectedService) {
         return (
@@ -30,12 +30,10 @@ const ServiceDetails = () => {
 
     return (
         <DefaultLayout>
-            {ready && (
-                <Seo
-                    title={`${lang === 'ar' ? selectedService.title : selectedService.title_en} | ${t('footer.companyName')}`}
-                    description={lang === 'ar' ? selectedService.description : selectedService.description_en}
-                />
-            )}
+            <Seo
+                title={`${selectedService.title} - ${selectedService.title_en}`}
+                description={lang === 'ar' ? selectedService.description : selectedService.description_en}
+            />
             <section className="py-16 bg-gray-100">
                 <div className="container mx-auto px-4 text-center">
                     <h3 className="text-3xl font-bold mb-6 text-mfk-blue">
