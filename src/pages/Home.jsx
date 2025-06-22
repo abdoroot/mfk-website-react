@@ -4,11 +4,14 @@ import WhyUs from '../components/WhyUs';
 import Testimonial from '../components/Testimonial';
 import DefaultLayout from '../layouts/DefaultLayout';
 import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import "../App.css"
 
 const Home = () => {
+    const location = useLocation();
+
     useEffect(() => {
-        const hash = window.location.hash;
+        const hash = location.hash;
         if (hash) {
             setTimeout(() => {
                 const element = document.querySelector(hash);
@@ -17,7 +20,7 @@ const Home = () => {
                 }
             }, 100); // Delay in milliseconds
         }
-    }, []);
+    }, [location.hash]);
     return (
         <DefaultLayout params={{ lang: '' }}>
             <Hero />
