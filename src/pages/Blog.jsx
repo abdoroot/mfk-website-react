@@ -4,7 +4,7 @@ import Seo from '@/components/Seo';
 import { Link } from 'react-router-dom';
 
 const Blog = () => {
-    const { t } = useTranslation();
+    const { t, lang } = useTranslation();
     const posts = [
         { path: '/colors', key: 'colorsGuide' },
         { path: '/room-colors', key: 'roomColors' },
