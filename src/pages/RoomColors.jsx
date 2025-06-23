@@ -1,9 +1,10 @@
 import DefaultLayout from '@/layouts/DefaultLayout';
 import useTranslation from '@/hooks/useTranslation';
 import Seo from '@/components/Seo';
+import { Link } from 'react-router-dom';
 
 const RoomColors = () => {
-    const { t } = useTranslation();
+    const { t, lang } = useTranslation();
     return (
         <DefaultLayout>
             <Seo
@@ -107,9 +108,16 @@ const RoomColors = () => {
                     </ul>
 
                     <h2 className="text-xl font-semibold mt-8 mb-2">📞 هل تحتاج للمساعدة؟</h2>
-                    <p>
+                    <p className='mb-8'>
                         احجز زيارة مجانية الآن لاختيار عينتك المناسبة وتجربة الألوان مباشرة على جدران منزلك.
                     </p>
+
+                    <Link
+                        to={`/${lang}/contact`}
+                        className="bg-mfk-yellow text-mfk-blue font-bold px-8 py-3 rounded-lg hover:bg-opacity-90 transition text-center"
+                    >
+                        احجز زيارة مجانية الآن
+                    </Link>
                 </div>
             </section>
         </DefaultLayout>
