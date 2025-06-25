@@ -1,7 +1,10 @@
 import DefaultLayout from '@/layouts/DefaultLayout';
 import Seo from '@/components/Seo';
+import { Link } from 'react-router-dom';
+import useTranslation from '@/hooks/useTranslation';
 
 const LuxuryPaints = () => {
+    const { lang, t } = useTranslation();
     return (
         <DefaultLayout>
             <Seo
@@ -87,14 +90,13 @@ const LuxuryPaints = () => {
                     <p className='mb-8'>
                         احجز زيارة مجانية ليقوم فريقنا بعرض عينات من <strong>ألوان الدهانات الفخمة</strong> مباشرة على جدران منزلك، حتى ترى النتيجة على الطبيعة وتتخذ القرار بثقة.
                     </p>
-                    <div>
-                        <a
-                            href="/ar/contact"
-                            className="bg-mfk-yellow text-mfk-blue font-bold px-8 py-3 rounded-lg hover:bg-opacity-90 transition text-center inline-block"
-                        >
-                            احجز زيارتك الآن
-                        </a>
-                    </div>
+
+                    <Link
+                        to={`/${lang}/contact`}
+                        className="bg-mfk-yellow text-mfk-blue font-bold px-8 py-3 rounded-lg hover:bg-opacity-90 transition text-center"
+                    >
+                        احجز زيارة مجانية الآن
+                    </Link>
                 </div>
             </section>
         </DefaultLayout>

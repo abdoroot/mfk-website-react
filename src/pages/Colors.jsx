@@ -42,14 +42,12 @@ const ColorsPage = () => {
                         احجز زيارة معاينة الآن لتجربة الألوان المناسبة على جدران منزلك مباشرة. فريقنا يساعدك في تحقيق أفضل نتيجة.
                     </p>
 
-                    <div>
-                        <Link
-                            to={`/${lang}/contact`}
-                            className="bg-mfk-yellow text-mfk-blue font-bold px-8 py-3 rounded-lg hover:bg-opacity-90 transition text-center"
-                        >
-                            احجز زيارة مجانية الآن
-                        </Link>
-                    </div>
+                    <Link
+                        to={`/${lang}/contact`}
+                        className="bg-mfk-yellow text-mfk-blue font-bold px-8 py-3 rounded-lg hover:bg-opacity-90 transition text-center"
+                    >
+                        احجز زيارة مجانية الآن
+                    </Link>
                 </div>
             </section>
         </DefaultLayout>
