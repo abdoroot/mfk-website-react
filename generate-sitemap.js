@@ -1,7 +1,9 @@
-import { writeFile } from 'fs/promises';
+import { readFile, writeFile, mkdir } from 'fs/promises';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import servicesData from './src/data/services.json' assert { type: 'json' };
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const baseUrl = 'https://mfk.ae';
 const langs = ['ar', 'en'];
@@ -24,11 +26,14 @@ const routes = [
     '/services'
 ];
 
-const dynamicRoutes = servicesData.map(service => `/services/${service.id}`);
+// Extract service IDs from the ServiceList.jsx file to build dynamic routes
+const servicesFilePath = path.join(__dirname, 'src', 'data', 'ServiceList.jsx');
+const servicesContent = await readFile(servicesFilePath, 'utf-8');
+const serviceIds = Array.from(servicesContent.matchAll(/id:\s*(\d+)/g)).map(
+    (m) => m[1]
+);
+const dynamicRoutes = serviceIds.map((id) => `/services/${id}`);
 
-// مسار المجلد الحالي
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
 
 const urls = [];
 
@@ -51,5 +56,7 @@ ${urls
 </urlset>
 `;
 
-await writeFile(path.join(__dirname, 'dist', 'sitemap.xml'), sitemapXml);
+const distDir = path.join(__dirname, 'dist');
+await mkdir(distDir, { recursive: true });
+await writeFile(path.join(distDir, 'sitemap.xml'), sitemapXml);
 console.log(`✅ Created sitemap.xml with ${urls.length} URLs`);
