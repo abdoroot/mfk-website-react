@@ -101,6 +101,34 @@ const KidFriendlyColors = () => {
                         احجز زيارة مجانية وسنقوم بعرض عينات من دهانات <strong>سهلة التنظيف</strong> ومناسبة للأطفال على جدران الغرفة لتجربة اللون والإضاءة مباشرة.
                     </p>
 
+                    <p className='mb-6'>
+                        {lang === 'ar' ? (
+                            <>
+                                تعرف على&nbsp;
+                                <Link to={`/${lang}/gloss-difference`} className='text-mfk-blue underline'>
+                                    الفرق بين ربع لمعة ونص لمعة
+                                </Link>
+                                &nbsp;أو اقرأ عن&nbsp;
+                                <Link to={`/${lang}/offwhite-vs-beige`} className='text-mfk-blue underline'>
+                                    الفرق بين أوف وايت وبيج
+                                </Link>
+                                .
+                            </>
+                        ) : (
+                            <>
+                                Learn about&nbsp;
+                                <Link to={`/${lang}/gloss-difference`} className='text-mfk-blue underline'>
+                                    {t('header.glossDifference')}
+                                </Link>
+                                &nbsp;or read&nbsp;
+                                <Link to={`/${lang}/offwhite-vs-beige`} className='text-mfk-blue underline'>
+                                    {t('header.offwhiteVsBeige')}
+                                </Link>
+                                .
+                            </>
+                        )}
+                    </p>
+
                     <Link
                         to={`/${lang}/contact`}
                         className="bg-mfk-yellow text-mfk-blue font-bold px-8 py-3 rounded-lg hover:bg-opacity-90 transition text-center"

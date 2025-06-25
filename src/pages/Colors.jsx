@@ -42,6 +42,26 @@ const ColorsPage = () => {
                         احجز زيارة معاينة الآن لتجربة الألوان المناسبة على جدران منزلك مباشرة. فريقنا يساعدك في تحقيق أفضل نتيجة.
                     </p>
 
+                    <p className='mb-6'>
+                        {lang === 'ar' ? (
+                            <>
+                                شاهد أيضًا&nbsp;
+                                <Link to={`/${lang}/jotun-2025-colors`} className='text-mfk-blue underline'>
+                                    كتالوج جوتن 2025
+                                </Link>
+                                .
+                            </>
+                        ) : (
+                            <>
+                                Also see&nbsp;
+                                <Link to={`/${lang}/jotun-2025-colors`} className='text-mfk-blue underline'>
+                                    {t('header.jotun2025Colors')}
+                                </Link>
+                                .
+                            </>
+                        )}
+                    </p>
+
                     <Link
                         to={`/${lang}/contact`}
                         className="bg-mfk-yellow text-mfk-blue font-bold px-8 py-3 rounded-lg hover:bg-opacity-90 transition text-center"

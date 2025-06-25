@@ -114,6 +114,34 @@ const OffwhiteVsBeige = () => {
                     <p className="mb-8">
                         احجز زيارة مجانية ليقوم فريقنا بعرض عينات <strong>أوف وايت</strong> و<strong>بيج</strong> على جدارك، ومساعدتك في اختيار اللون الأنسب حسب ذوقك والإضاءة.
                     </p>
+
+                    <p className='mb-6'>
+                        {lang === 'ar' ? (
+                            <>
+                                اقرأ أيضًا&nbsp;
+                                <Link to={`/${lang}/brighten-your-space`} className='text-mfk-blue underline'>
+                                    لون يعطي وسع للمكان
+                                </Link>
+                                &nbsp;أو شاهد&nbsp;
+                                <Link to={`/${lang}/room-colors`} className='text-mfk-blue underline'>
+                                    أفضل الألوان لكل غرفة
+                                </Link>
+                                .
+                            </>
+                        ) : (
+                            <>
+                                Also read&nbsp;
+                                <Link to={`/${lang}/brighten-your-space`} className='text-mfk-blue underline'>
+                                    {t('header.brightenYourSpace')}
+                                </Link>
+                                &nbsp;or see&nbsp;
+                                <Link to={`/${lang}/room-colors`} className='text-mfk-blue underline'>
+                                    {t('header.roomColors')}
+                                </Link>
+                                .
+                            </>
+                        )}
+                    </p>
                     <Link
                         to={`/${lang}/contact`}
                         className="bg-mfk-yellow text-mfk-blue font-bold px-8 py-3 rounded-lg hover:bg-opacity-90 transition text-center"

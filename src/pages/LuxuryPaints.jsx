@@ -98,6 +98,34 @@ const LuxuryPaints = () => {
                         احجز زيارة مجانية ليقوم فريقنا بعرض عينات من <strong>ألوان الدهانات الفخمة</strong> مباشرة على جدران منزلك، حتى ترى النتيجة على الطبيعة وتتخذ القرار بثقة.
                     </p>
 
+                    <p className='mb-6'>
+                        {lang === 'ar' ? (
+                            <>
+                                تصفح&nbsp;
+                                <Link to={`/${lang}/jotun-2025-colors`} className='text-mfk-blue underline'>
+                                    كتالوج جوتن 2025
+                                </Link>
+                                &nbsp;أو شاهد&nbsp;
+                                <Link to={`/${lang}/projects-gallery`} className='text-mfk-blue underline'>
+                                    معرض المشاريع
+                                </Link>
+                                .
+                            </>
+                        ) : (
+                            <>
+                                See the&nbsp;
+                                <Link to={`/${lang}/jotun-2025-colors`} className='text-mfk-blue underline'>
+                                    {t('header.jotun2025Colors')}
+                                </Link>
+                                &nbsp;or view our&nbsp;
+                                <Link to={`/${lang}/projects-gallery`} className='text-mfk-blue underline'>
+                                    {t('header.projectsGallery')}
+                                </Link>
+                                .
+                            </>
+                        )}
+                    </p>
+
                     <Link
                         to={`/${lang}/contact`}
                         className="bg-mfk-yellow text-mfk-blue font-bold px-8 py-3 rounded-lg hover:bg-opacity-90 transition text-center"

@@ -18,6 +18,19 @@ const ProjectsGallery = () => {
                     <p className="text-gray-700 whitespace-pre-line">
                         {t('blogPages.projectsGallery.content')}
                     </p>
+
+                    <p className='mt-6'>
+                        {t('blog.intro')}
+                        {" "}
+                        <Link to={`/${t('header.colorsGuide') === 'دليل الألوان' ? 'ar' : 'en'}/colors`} className='text-mfk-blue underline'>
+                            {t('header.colorsGuide')}
+                        </Link>
+                        {" "}
+                        <Link to={`/${t('header.jotun2025Colors') === 'كتالوج جوتن 2025' ? 'ar' : 'en'}/jotun-2025-colors`} className='text-mfk-blue underline'>
+                            {t('header.jotun2025Colors')}
+                        </Link>
+                        .
+                    </p>
                 </div>
             </section>
         </DefaultLayout>

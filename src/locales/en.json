@@ -172,8 +172,27 @@
       "title": "Off-white vs Beige",
       "content": "Comparison with examples and images.\nUses of each color.\nSlide for each type: Pure Off-white – Warm Beige – Greige."
     }
-  }
-  ,
+  },
+  "blogArticles": {
+    "brightenYourSpace": {
+      "intro": "Many people feel cramped in small rooms. Here we showcase five colors that visually expand your space with before-and-after examples and tips about natural light.",
+      "whiteTitle": "1. Crisp White – classic and effective",
+      "whiteParagraph": "White reflects light and gives a sense of purity and openness. Ideal for walls and ceilings in compact areas.",
+      "greyTitle": "2. Light Grey – perfect balance",
+      "greyParagraph": "Light grey adds depth without darkening the room and pairs well with wood or metal furnishings.",
+      "blueTitle": "3. Sky Blue – fresh and airy",
+      "blueParagraph": "A light blue brings a feeling of breeze and openness, especially in rooms with large windows.",
+      "beigeTitle": "4. Warm Beige – comfort and space",
+      "beigeParagraph": "Soft beige shades are ideal for a warm, elegant vibe that widens the room without being harsh.",
+      "mintTitle": "5. Mint Green – subtle with sunshine",
+      "mintParagraph": "A modern touch that interacts wonderfully with natural light. Great for kitchens and bathrooms.",
+      "lightingTitle": "Natural lighting effect",
+      "lightingParagraph": "Whatever color you choose, daylight plays a big role in enhancing spaciousness. Use sheer curtains and avoid blocking light during the day.",
+      "ctaTitle": "Need help choosing colors?",
+      "ctaParagraph": "Book a free visit to test colors directly on your walls. Our team will help you achieve the best result."
+    }
+  },
+  
   "blog": {
     "title": "Painting Guides",
     "intro": "Browse our latest articles"

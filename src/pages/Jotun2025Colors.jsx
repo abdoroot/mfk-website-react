@@ -389,6 +389,34 @@ const Jotun2025Colors = () => {
                         احجز زيارة معاينة الآن لتجربة الألوان المناسبة على جدران منزلك مباشرة. فريقنا يساعدك في تحقيق أفضل نتيجة.
                     </p>
 
+                    <p className='mb-6'>
+                        {lang === 'ar' ? (
+                            <>
+                                تصفح أيضًا&nbsp;
+                                <Link to={`/${lang}/luxury-paints`} className='text-mfk-blue underline'>
+                                    دهانات فخمة
+                                </Link>
+                                &nbsp;أو شاهد&nbsp;
+                                <Link to={`/${lang}/colors`} className='text-mfk-blue underline'>
+                                    لوحة الألوان
+                                </Link>
+                                .
+                            </>
+                        ) : (
+                            <>
+                                Browse&nbsp;
+                                <Link to={`/${lang}/luxury-paints`} className='text-mfk-blue underline'>
+                                    {t('header.luxuryPaints')}
+                                </Link>
+                                &nbsp;or view the&nbsp;
+                                <Link to={`/${lang}/colors`} className='text-mfk-blue underline'>
+                                    {t('header.colorsGuide')}
+                                </Link>
+                                .
+                            </>
+                        )}
+                    </p>
+
                     <div>
                         <Link
                             to={`/${lang}/contact`}

@@ -93,6 +93,34 @@ const GlossDifference = () => {
                     <p className='mb-8'>
                         احجز زيارة مجانية ليقوم فريقنا بعرض عينات دهان <strong>ربع لمعة</strong> و<strong>نص لمعة</strong> مباشرة على جدران منزلك، حتى ترى الفروق بنفسك وتتخذ القرار الأنسب لك.
                     </p>
+
+                    <p className='mb-6'>
+                        {lang === 'ar' ? (
+                            <>
+                                لمعرفة الألوان المناسبة للأطفال، اطلع على&nbsp;
+                                <Link to={`/${lang}/kid-friendly-colors`} className='text-mfk-blue underline'>
+                                    ألوان سهلة التنظيف للأطفال
+                                </Link>
+                                &nbsp;أو شاهد&nbsp;
+                                <Link to={`/${lang}/offwhite-vs-beige`} className='text-mfk-blue underline'>
+                                    الفرق بين أوف وايت وبيج
+                                </Link>
+                                .
+                            </>
+                        ) : (
+                            <>
+                                For child-friendly shades, see&nbsp;
+                                <Link to={`/${lang}/kid-friendly-colors`} className='text-mfk-blue underline'>
+                                    {t('header.kidFriendlyColors')}
+                                </Link>
+                                &nbsp;or check&nbsp;
+                                <Link to={`/${lang}/offwhite-vs-beige`} className='text-mfk-blue underline'>
+                                    {t('header.offwhiteVsBeige')}
+                                </Link>
+                                .
+                            </>
+                        )}
+                    </p>
                     <div>
                         <Link
                             to={`/${lang}/contact`}

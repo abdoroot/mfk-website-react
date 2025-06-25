@@ -128,6 +128,34 @@ const LightingAndColor = () => {
                     <p className="mb-8">
                         احجز زيارة مجانية ليقوم فريقنا بتجربة الألوان المناسبة مباشرة على جدرانك وتحت نفس الإضاءة، حتى ترى الفرق بنفسك.
                     </p>
+
+                    <p className="mb-6">
+                        {lang === 'ar' ? (
+                            <>
+                                اقرأ أيضًا&nbsp;
+                                <Link to={`/${lang}/brighten-your-space`} className='text-mfk-blue underline'>
+                                    لون يعطي وسع للمكان
+                                </Link>
+                                &nbsp;و&nbsp;
+                                <Link to={`/${lang}/room-colors`} className='text-mfk-blue underline'>
+                                    أفضل الألوان لكل غرفة
+                                </Link>
+                                .
+                            </>
+                        ) : (
+                            <>
+                                Check also&nbsp;
+                                <Link to={`/${lang}/brighten-your-space`} className='text-mfk-blue underline'>
+                                    {t('header.brightenYourSpace')}
+                                </Link>
+                                &nbsp;and&nbsp;
+                                <Link to={`/${lang}/room-colors`} className='text-mfk-blue underline'>
+                                    {t('header.roomColors')}
+                                </Link>
+                                .
+                            </>
+                        )}
+                    </p>
                     <Link
                         to={`/${lang}/contact`}
                         className="bg-mfk-yellow text-mfk-blue font-bold px-8 py-3 rounded-lg hover:bg-opacity-90 transition text-center"

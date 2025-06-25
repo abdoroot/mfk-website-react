@@ -112,6 +112,34 @@ const RoomColors = () => {
                         احجز زيارة مجانية الآن لاختيار عينتك المناسبة وتجربة الألوان مباشرة على جدران منزلك.
                     </p>
 
+                    <p className='mb-6'>
+                        {lang === 'ar' ? (
+                            <>
+                                لمزيد من المقارنات شاهد&nbsp;
+                                <Link to={`/${lang}/offwhite-vs-beige`} className='text-mfk-blue underline'>
+                                    الفرق بين أوف وايت وبيج
+                                </Link>
+                                &nbsp;أو تعرف على&nbsp;
+                                <Link to={`/${lang}/brighten-your-space`} className='text-mfk-blue underline'>
+                                    لون يعطي وسع للمكان
+                                </Link>
+                                .
+                            </>
+                        ) : (
+                            <>
+                                See the&nbsp;
+                                <Link to={`/${lang}/offwhite-vs-beige`} className='text-mfk-blue underline'>
+                                    {t('header.offwhiteVsBeige')}
+                                </Link>
+                                &nbsp;article or read&nbsp;
+                                <Link to={`/${lang}/brighten-your-space`} className='text-mfk-blue underline'>
+                                    {t('header.brightenYourSpace')}
+                                </Link>
+                                .
+                            </>
+                        )}
+                    </p>
+
                     <Link
                         to={`/${lang}/contact`}
                         className="bg-mfk-yellow text-mfk-blue font-bold px-8 py-3 rounded-lg hover:bg-opacity-90 transition text-center"
