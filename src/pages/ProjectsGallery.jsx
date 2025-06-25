@@ -3,7 +3,7 @@ import useTranslation from '@/hooks/useTranslation';
 import Seo from '@/components/Seo';
 
 const ProjectsGallery = () => {
-    const { t } = useTranslation();
+    const { t, lang } = useTranslation();
     return (
         <DefaultLayout>
             <Seo

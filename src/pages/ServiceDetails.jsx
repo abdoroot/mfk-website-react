@@ -7,7 +7,7 @@ import useTranslation from '@/hooks/useTranslation';
 import Seo from '@/components/Seo';
 
 const ServiceDetails = () => {
-    const { id, lang } = useParams();
+    const { id } = useParams();
     const navigate = useNavigate();
     const serviceId = parseInt(id, 10);
     const selectedService = services.find((s) => s.id === serviceId);
@@ -15,7 +15,7 @@ const ServiceDetails = () => {
         (sub) => sub.category_id === serviceId
     );
 
-    const { t } = useTranslation();
+    const { t, lang } = useTranslation();
 
     if (!selectedService) {
         return (

@@ -3,7 +3,7 @@ import useTranslation from '@/hooks/useTranslation';
 import Seo from '@/components/Seo';
 
 const About = () => {
-    const { t } = useTranslation();
+    const { t, lang } = useTranslation();
 
     return (
         <DefaultLayout>

@@ -3,7 +3,7 @@ import useTranslation from '@/hooks/useTranslation';
 import Seo from '@/components/Seo';
 
 const PrivacyPolicy = () => {
-    const { t } = useTranslation();
+    const { t, lang } = useTranslation();
 
     const sections = t('privacy.sections');
 

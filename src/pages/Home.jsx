@@ -11,7 +11,7 @@ import "../App.css"
 
 const Home = () => {
     const location = useLocation();
-    const { t } = useTranslation();
+    const { t, lang } = useTranslation();
 
     useEffect(() => {
         const hash = location.hash;
@@ -25,7 +25,7 @@ const Home = () => {
         }
     }, [location.hash]);
     return (
-        <DefaultLayout params={{ lang: '' }}>
+        <DefaultLayout params={{ lang }}>
             <Seo
                 title="الرئيسية - Home"
                 description={t('hero.description')}
