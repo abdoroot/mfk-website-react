@@ -1,9 +1,10 @@
-const fs = require('fs');
-const path = require('path');
+import { writeFile } from 'fs/promises';
+import path from 'path';
+import { fileURLToPath } from 'url';
+import servicesData from './src/data/services.json' assert { type: 'json' };
 
 const baseUrl = 'https://mfk.ae';
 const langs = ['ar', 'en'];
-
 const routes = [
     '',
     '/about',
@@ -23,25 +24,23 @@ const routes = [
     '/services'
 ];
 
-// 👇 تحميل الخدمات من ملف JSON
-const servicesData = require('./src/data/services.json');
+const dynamicRoutes = servicesData.map(service => `/services/${service.id}`);
 
-// 🔁 إنشاء روابط services/:id
-const dynamicServiceRoutes = servicesData.map(service => `/services/${service.id}`);
+// مسار المجلد الحالي
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
-// 🌐 إنشاء جميع المسارات لكل لغة
 const urls = [];
 
 langs.forEach((lang) => {
     routes.forEach((route) => {
         urls.push(`${baseUrl}/${lang}${route}`);
     });
-    dynamicServiceRoutes.forEach((route) => {
+    dynamicRoutes.forEach((route) => {
         urls.push(`${baseUrl}/${lang}${route}`);
     });
 });
 
-// 📝 توليد XML
 const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${urls
@@ -52,5 +51,5 @@ ${urls
 </urlset>
 `;
 
-fs.writeFileSync(path.join(__dirname, 'dist', 'sitemap.xml'), sitemapXml);
-console.log('✅ sitemap.xml created with', urls.length, 'URLs');
+await writeFile(path.join(__dirname, 'dist', 'sitemap.xml'), sitemapXml);
+console.log(`✅ Created sitemap.xml with ${urls.length} URLs`);
