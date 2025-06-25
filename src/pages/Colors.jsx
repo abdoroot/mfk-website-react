@@ -2,6 +2,7 @@ import DefaultLayout from '@/layouts/DefaultLayout';
 import colors from '@/data/colors';
 import useTranslation from '@/hooks/useTranslation';
 import Seo from '@/components/Seo';
+import { Link } from 'react-router-dom';
 
 const ColorsPage = () => {
     const { lang, t } = useTranslation();
@@ -35,6 +36,20 @@ const ColorsPage = () => {
                             </div>
                         </div>
                     ))}
+
+                    <h2 className="text-xl font-semibold mt-10 mb-2">📞 هل تحتاج مساعدة في اختيار الألوان؟</h2>
+                    <p className='mb-8'>
+                        احجز زيارة معاينة الآن لتجربة الألوان المناسبة على جدران منزلك مباشرة. فريقنا يساعدك في تحقيق أفضل نتيجة.
+                    </p>
+
+                    <div>
+                        <Link
+                            to={`/${lang}/contact`}
+                            className="bg-mfk-yellow text-mfk-blue font-bold px-8 py-3 rounded-lg hover:bg-opacity-90 transition text-center"
+                        >
+                            احجز زيارة مجانية الآن
+                        </Link>
+                    </div>
                 </div>
             </section>
         </DefaultLayout>
