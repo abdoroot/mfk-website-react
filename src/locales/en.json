@@ -17,7 +17,7 @@
     "lightingAndColor": "Lighting and Color",
     "kidFriendlyColors": "Kid-friendly Colors",
     "projectsGallery": "Projects Gallery",
-  "offwhiteVsBeige": "Off-white vs Beige"
+    "offwhiteVsBeige": "Off-white vs Beige"
   },
   "hero": {
     "title": "Home Maintenance With",
@@ -172,13 +172,13 @@
       "title": "Off-white vs Beige",
       "content": "Comparison with examples and images.\nUses of each color.\nSlide for each type: Pure Off-white – Warm Beige – Greige."
     }
-  }
-  ,
+  },
   "discountPopup": {
     "title": "Get 20% Off!",
     "text": "Get a 20% discount on our painting service.",
-    "cta": "Contact Us",
-    "mobilePlaceholder": "Your mobile number"
+    "cta": "Don't Miss Out – Save 20% Today",
+    "mobilePlaceholder": "Your mobile number",
+    "thankYou": "Thanks, your discount is saved! We'll contact you soon 😎"
   },
   "blog": {
     "title": "Painting Guides",
