@@ -1,4 +1,4 @@
-import DefaultLayout from '@/layouts/DefaultLayout';
+import BlogLayout from '@/layouts/BlogLayout';
 import Seo from '@/components/Seo';
 import { Link } from 'react-router-dom';
 import useTranslation from '@/hooks/useTranslation';
@@ -6,7 +6,7 @@ import useTranslation from '@/hooks/useTranslation';
 const LuxuryPaints = () => {
     const { lang, t } = useTranslation();
     return (
-        <DefaultLayout>
+        <BlogLayout>
             <Seo
                 title="دهانات فخمة - Luxury Paints"
                 description="اكتشف أفضل أنواع وألوان الدهانات الفخمة التي تضيف لمسة من الرقي والفخامة إلى منزلك. دهانات جوتن الفاخرة وأفكار لغرف المجالس والصالات."
@@ -106,7 +106,7 @@ const LuxuryPaints = () => {
                     </Link>
                 </div>
             </section>
-        </DefaultLayout>
+        </BlogLayout>
     );
 };
 

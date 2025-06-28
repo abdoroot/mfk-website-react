@@ -172,8 +172,14 @@
       "title": "Off-white vs Beige",
       "content": "Comparison with examples and images.\nUses of each color.\nSlide for each type: Pure Off-white – Warm Beige – Greige."
     }
-  }
-  ,
+  },
+  "discountPopup": {
+    "title": "Get 20% Off!",
+    "text": "Get a 20% discount on our painting service.",
+    "cta": "Don't Miss Out – Save 20% Today",
+    "mobilePlaceholder": "Your mobile number",
+    "thankYou": "Thanks, your discount is saved! We'll contact you soon 😎"
+  },
   "blog": {
     "title": "Painting Guides",
     "intro": "Browse our latest articles"

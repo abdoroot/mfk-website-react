@@ -1,4 +1,4 @@
-import DefaultLayout from '@/layouts/DefaultLayout';
+import BlogLayout from '@/layouts/BlogLayout';
 import colors from '@/data/colors';
 import useTranslation from '@/hooks/useTranslation';
 import Seo from '@/components/Seo';
@@ -8,7 +8,7 @@ const ColorsPage = () => {
     const { lang, t } = useTranslation();
 
     return (
-        <DefaultLayout>
+        <BlogLayout>
             <Seo
                 title="لوحة الألوان - Color Palette"
                 description={t('footer.description')}
@@ -50,7 +50,7 @@ const ColorsPage = () => {
                     </Link>
                 </div>
             </section>
-        </DefaultLayout>
+        </BlogLayout>
     );
 };
 

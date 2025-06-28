@@ -1,4 +1,4 @@
-import DefaultLayout from '@/layouts/DefaultLayout';
+import BlogLayout from '@/layouts/BlogLayout';
 import useTranslation from '@/hooks/useTranslation';
 import Seo from '@/components/Seo';
 import { Link } from 'react-router-dom';
@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 const BrightenYourSpace = () => {
     const { t, lang } = useTranslation();
     return (
-        <DefaultLayout>
+        <BlogLayout>
             <Seo
                 title="5 ألوان تعطي وسع للمكان - أفضل الألوان للمساحات الصغيرة"
                 description="ألوان تجعل المكان أوسع بصريًا مع صور قبل وبعد وتأثير الإضاءة الطبيعية"
@@ -121,7 +121,7 @@ const BrightenYourSpace = () => {
                     </Link>
                 </div>
             </section>
-        </DefaultLayout>
+        </BlogLayout>
     );
 };
 

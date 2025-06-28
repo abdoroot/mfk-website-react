@@ -1,4 +1,4 @@
-import DefaultLayout from '@/layouts/DefaultLayout';
+import BlogLayout from '@/layouts/BlogLayout';
 import useTranslation from '@/hooks/useTranslation';
 import Seo from '@/components/Seo';
 import { Link } from 'react-router-dom';
@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 const LightingAndColor = () => {
     const { lang, t } = useTranslation();
     return (
-        <DefaultLayout>
+        <BlogLayout>
             <Seo
                 title="كيف تختار لونك حسب نوع الإضاءة؟ - How to Choose Colors by Lighting Type?"
                 description="تعرف على تأثير الإضاءة الطبيعية والفلورسنت والليد على ألوان الدهان. أمثلة عملية ودرجات جوتن المناسبة لكل نوع إضاءة + نصائح عملية."
@@ -136,7 +136,7 @@ const LightingAndColor = () => {
                     </Link>
                 </div>
             </section>
-        </DefaultLayout>
+        </BlogLayout>
     );
 };
 
