@@ -9,12 +9,6 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     exit;
 }
 
-// Optional: validate same server origin (can be adjusted as needed)
-if ($_SERVER['REMOTE_ADDR'] !== $_SERVER['SERVER_ADDR']) {
-    http_response_code(403);
-    echo json_encode(['status' => 'error', 'message' => 'Forbidden']);
-    exit;
-}
 
 // Sanitize and format POST data
 $postData = filter_input_array(INPUT_POST, FILTER_SANITIZE_FULL_SPECIAL_CHARS);
