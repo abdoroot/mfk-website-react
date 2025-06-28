@@ -16,13 +16,13 @@ export default function LiveChat({ lang }) {
         const firstScript = document.getElementsByTagName('script')[0]
         firstScript.parentNode?.insertBefore(s1, firstScript)
 
-        const style = document.createElement('style')
-        style.innerHTML = '#tawkchat-container{bottom:96px!important}'
-        document.head.appendChild(style)
+        // const style = document.createElement('style')
+        // style.innerHTML = '#tawkchat-container{bottom:96px!important}'
+        // //document.head.appendChild(style)
 
         return () => {
             s1.remove()
-            style.remove()
+            //style.remove()
         }
     }, [lang])
     return null

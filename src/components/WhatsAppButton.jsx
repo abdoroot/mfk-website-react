@@ -6,7 +6,7 @@ export default function WhatsAppButton({ phone = '971508191635', message = 'ال
             href={whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="fixed bottom-4 right-4 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg z-50 transition-all duration-300"
+            className="fixed bottom-22 right-4 bg-green-500 hover:bg-green-600 text-white p-4.5 rounded-full shadow-lg z-50 transition-all duration-300"
             title="تحدث معنا على واتساب"
         >
             <svg
