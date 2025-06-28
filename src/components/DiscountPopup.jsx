@@ -5,15 +5,21 @@ import useTranslation from '@/hooks/useTranslation';
 const DiscountPopup = () => {
     const { lang, t } = useTranslation();
     const [visible, setVisible] = useState(false);
+    const [mobile, setMobile] = useState('');
 
     useEffect(() => {
+        if (localStorage.getItem('discountPopupShown')) return;
+
         const handleScroll = () => {
             const { scrollTop, scrollHeight, clientHeight } = document.documentElement;
             const scrolled = scrollTop / (scrollHeight - clientHeight);
             if (scrolled >= 0.75) {
                 setVisible(true);
+                localStorage.setItem('discountPopupShown', 'true');
+                window.removeEventListener('scroll', handleScroll);
             }
         };
+
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
@@ -36,6 +42,13 @@ const DiscountPopup = () => {
                 <p className="mb-4 text-gray-800">
                     {t('discountPopup.text')}
                 </p>
+                <input
+                    type="tel"
+                    value={mobile}
+                    onChange={(e) => setMobile(e.target.value)}
+                    placeholder={t('discountPopup.mobilePlaceholder')}
+                    className="w-full mb-4 border rounded-md p-2"
+                />
                 <Link
                     to={`/${lang}/contact`}
                     className="bg-mfk-yellow text-mfk-blue font-bold px-4 py-2 rounded-lg hover:bg-opacity-90 transition"

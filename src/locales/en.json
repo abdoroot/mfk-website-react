@@ -176,8 +176,9 @@
   ,
   "discountPopup": {
     "title": "Get 20% Off!",
-    "text": "Contact us today and enjoy 20% off your next service.",
-    "cta": "Contact Us"
+    "text": "Get a 20% discount on our painting service.",
+    "cta": "Contact Us",
+    "mobilePlaceholder": "Your mobile number"
   },
   "blog": {
     "title": "Painting Guides",
