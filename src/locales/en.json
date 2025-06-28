@@ -17,7 +17,7 @@
     "lightingAndColor": "Lighting and Color",
     "kidFriendlyColors": "Kid-friendly Colors",
     "projectsGallery": "Projects Gallery",
-    "offwhiteVsBeige": "Off-white vs Beige"
+  "offwhiteVsBeige": "Off-white vs Beige"
   },
   "hero": {
     "title": "Home Maintenance With",
@@ -174,6 +174,11 @@
     }
   }
   ,
+  "discountPopup": {
+    "title": "Get 20% Off!",
+    "text": "Contact us today and enjoy 20% off your next service.",
+    "cta": "Contact Us"
+  },
   "blog": {
     "title": "Painting Guides",
     "intro": "Browse our latest articles"

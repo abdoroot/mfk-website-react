@@ -1,4 +1,4 @@
-import DefaultLayout from '@/layouts/DefaultLayout';
+import BlogLayout from '@/layouts/BlogLayout';
 import useTranslation from '@/hooks/useTranslation';
 import Seo from '@/components/Seo';
 import { Link } from 'react-router-dom';
@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 const KidFriendlyColors = () => {
     const { lang, t } = useTranslation();
     return (
-        <DefaultLayout>
+        <BlogLayout>
             <Seo
                 title="ألوان سهلة التنظيف ومناسبة للأطفال - Easy-to-clean Colors for Kids"
                 description="اكتشف أفضل ألوان دهانات مناسبة لغرف الأطفال وسهلة التنظيف من جوتن. درجات لا تُظهر الأوساخ بسهولة وأنواع دهان مناسبة مثل فينوماستيك الصحي والمتين."
@@ -110,7 +110,7 @@ const KidFriendlyColors = () => {
 
                 </div>
             </section>
-        </DefaultLayout>
+        </BlogLayout>
     );
 };
 

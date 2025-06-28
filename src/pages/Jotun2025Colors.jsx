@@ -1,4 +1,4 @@
-import DefaultLayout from '@/layouts/DefaultLayout';
+import BlogLayout from '@/layouts/BlogLayout';
 import useTranslation from '@/hooks/useTranslation';
 import Seo from '@/components/Seo';
 import { useState } from 'react';
@@ -9,7 +9,7 @@ const Jotun2025Colors = () => {
     const [image, setImage] = useState('');
 
     return (
-        <DefaultLayout>
+        <BlogLayout>
             <Seo
                 title="كتالوج جوتن 2025 - مجموعة ألوان تناغم"
                 description="اكتشف كتالوج جوتن 2025 الجديد، مجموعة تناغم التي تضم أكثر من 30 درجة لونية موزعة على 6 عائلات ألوان: البيج، الخوخي، الرمادي، الأزرق، الأخضر، الأصفر."
@@ -399,7 +399,7 @@ const Jotun2025Colors = () => {
                     </div>
                 </div>
             </section>
-        </DefaultLayout>
+        </BlogLayout>
     );
 };
 

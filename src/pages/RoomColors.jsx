@@ -1,4 +1,4 @@
-import DefaultLayout from '@/layouts/DefaultLayout';
+import BlogLayout from '@/layouts/BlogLayout';
 import useTranslation from '@/hooks/useTranslation';
 import Seo from '@/components/Seo';
 import { Link } from 'react-router-dom';
@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 const RoomColors = () => {
     const { t, lang } = useTranslation();
     return (
-        <DefaultLayout>
+        <BlogLayout>
             <Seo
                 title="أفضل الألوان لكل غرفة - Best Colors by Room Type"
                 description={t('blogPages.roomColors.content')}
@@ -120,7 +120,7 @@ const RoomColors = () => {
                     </Link>
                 </div>
             </section>
-        </DefaultLayout>
+        </BlogLayout>
     );
 };
 

@@ -1,4 +1,4 @@
-import DefaultLayout from '@/layouts/DefaultLayout';
+import BlogLayout from '@/layouts/BlogLayout';
 import useTranslation from '@/hooks/useTranslation';
 import Seo from '@/components/Seo';
 import { Link } from 'react-router-dom';
@@ -7,7 +7,7 @@ const GlossDifference = () => {
     const { lang, t } = useTranslation();
 
     return (
-        <DefaultLayout>
+        <BlogLayout>
             <Seo
                 title="الفرق بين ربع لمعة ونص لمعة جوتن - Quarter vs Half Gloss"
                 description="تعرف على الفرق بين ربع لمعة ونص لمعة في دهانات جوتن، مميزات كل نوع، وأين يُستخدم، مع جدول مقارنة واضح."
@@ -104,7 +104,7 @@ const GlossDifference = () => {
 
                 </div>
             </section>
-        </DefaultLayout>
+        </BlogLayout>
     );
 };
 

@@ -1,11 +1,11 @@
-import DefaultLayout from '@/layouts/DefaultLayout';
+import BlogLayout from '@/layouts/BlogLayout';
 import useTranslation from '@/hooks/useTranslation';
 import Seo from '@/components/Seo';
 
 const ProjectsGallery = () => {
     const { t } = useTranslation();
     return (
-        <DefaultLayout>
+        <BlogLayout>
             <Seo
                 title="قبل/بعد – مشروع دهان حقيقي - Before/After – Real Paint Project"
                 description={t('blogPages.projectsGallery.content')}
@@ -20,7 +20,7 @@ const ProjectsGallery = () => {
                     </p>
                 </div>
             </section>
-        </DefaultLayout>
+        </BlogLayout>
     );
 };
 

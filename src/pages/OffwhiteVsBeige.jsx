@@ -1,4 +1,4 @@
-import DefaultLayout from '@/layouts/DefaultLayout';
+import BlogLayout from '@/layouts/BlogLayout';
 import Seo from '@/components/Seo';
 import { Link } from 'react-router-dom';
 import useTranslation from '@/hooks/useTranslation';
@@ -7,7 +7,7 @@ const OffwhiteVsBeige = () => {
     const { lang, t } = useTranslation();
 
     return (
-        <DefaultLayout>
+        <BlogLayout>
             <Seo
                 title="ما الفرق بين أوف وايت وبيج؟ - Off-white vs Beige"
                 description="تعرف على الفرق بين لون الأوف وايت والبيج من حيث الدرجة، التأثير، الاستخدام، وأكواد دهانات جوتن المناسبة لكل لون. أمثلة وصور توضيحية."
@@ -122,7 +122,7 @@ const OffwhiteVsBeige = () => {
                     </Link>
                 </div>
             </section>
-        </DefaultLayout>
+        </BlogLayout>
     );
 };
 
