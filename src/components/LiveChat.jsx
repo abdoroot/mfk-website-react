@@ -1,9 +1,10 @@
 import { useEffect } from 'react'
 
-export default function LiveChat() {
+export default function LiveChat({ lang }) {
     useEffect(() => {
         const w = window
         w.Tawk_API = w.Tawk_API || {}
+        w.Tawk_API.lang = lang
         w.Tawk_LoadStart = new Date()
 
         const s1 = document.createElement('script')
@@ -23,7 +24,6 @@ export default function LiveChat() {
             s1.remove()
             style.remove()
         }
-    }, [])
-
+    }, [lang])
     return null
 }

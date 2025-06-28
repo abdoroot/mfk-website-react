@@ -22,7 +22,7 @@ const DefaultLayout = ({ children, params }) => {
             <NavBar />
             <main className="flex-1">{children}</main>
             <Footer />
-            <LiveChat />
+            <LiveChat lang={lang} />
             <WhatsAppButton phone="971508191635" />
         </div>
     )
