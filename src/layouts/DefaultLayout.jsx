@@ -2,6 +2,7 @@
 import NavBar from '@/components/NavBar'
 import Footer from '@/components/Footer'
 import WhatsAppButton from '@/components/WhatsAppButton'
+import LiveChat from '@/components/LiveChat'
 import { locales, defaultLocale } from '@/lib/i18n'
 import '@/App.css'
 
@@ -21,6 +22,7 @@ const DefaultLayout = ({ children, params }) => {
             <NavBar />
             <main className="flex-1">{children}</main>
             <Footer />
+            <LiveChat />
             <WhatsAppButton phone="971508191635" />
         </div>
     )
