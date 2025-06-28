@@ -25,6 +25,5 @@ export default function LiveChat({ lang }) {
             style.remove()
         }
     }, [lang])
-
     return null
 }
