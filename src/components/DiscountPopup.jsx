@@ -8,14 +8,14 @@ const DiscountPopup = () => {
     const [submitted, setSubmitted] = useState(false);
 
     useEffect(() => {
-        if (localStorage.getItem('discountPopupShown')) return;
+        //if (localStorage.getItem('discountPopupShown')) return;
 
         const handleScroll = () => {
             const { scrollTop, scrollHeight, clientHeight } = document.documentElement;
             const scrolled = scrollTop / (scrollHeight - clientHeight);
             if (scrolled >= 0.75) {
                 setVisible(true);
-                localStorage.setItem('discountPopupShown', 'true');
+                //localStorage.setItem('discountPopupShown', 'true');
                 window.removeEventListener('scroll', handleScroll);
             }
         };
