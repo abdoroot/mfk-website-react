@@ -219,7 +219,19 @@
     "back": "Back",
     "calculate": "Show Estimate",
     "estimated": "Estimated price:",
-    "send_whatsapp": "Send photo on WhatsApp"
+    "send_whatsapp": "🎯 Get the exact price now – Message us on WhatsApp",
+    "progress": {
+      "room": "Room type",
+      "wall": "Wall condition",
+      "colors": "Number of colors",
+      "paint": "Paint quality"
+    },
+    "summary": {
+      "room": "Room or area",
+      "wall": "Wall condition",
+      "colors": "Colors",
+      "paint": "Paint quality"
+    }
   },
   "blog": {
     "title": "Painting Guides",

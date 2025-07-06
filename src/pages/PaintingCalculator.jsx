@@ -14,6 +14,28 @@ const PaintingCalculator = () => {
   const [quality, setQuality] = useState('luxury');
   const [result, setResult] = useState(null);
   const [step, setStep] = useState(1);
+  const [area, setArea] = useState(0);
+
+  const progressSteps = [
+    { number: 1, label: t('calculator.progress.room') },
+    { number: 2, label: t('calculator.progress.wall') },
+    { number: 3, label: t('calculator.progress.colors') },
+    { number: 4, label: t('calculator.progress.paint') }
+  ];
+
+  const roomLabel =
+    roomType && roomType !== 'custom'
+      ? `${t('calculator.rooms.' + roomType)} (${area} m²)`
+      : roomType === 'custom' && length && width
+      ? `${length}m x ${width}m (${area} m²)`
+      : '';
+  const wallLabel = t(`calculator.wall.${wallCondition.replace('_cracks','')}`);
+  const colorsLabel = t(
+    `calculator.colors.${
+      colors === '1' ? 'one' : colors === '2' ? 'two' : colors === '3+' ? 'more' : 'help'
+    }`
+  );
+  const qualityLabel = t(`calculator.quality.${quality}`);
 
   const calculate = () => {
     let area = 0;
@@ -28,6 +50,7 @@ const PaintingCalculator = () => {
     const qualityPrice = data.paintQuality[quality] || 0;
     const multiplier = data.colorsMultiplier[colors] || 1;
     const total = (basePrice + wallExtra + qualityPrice) * multiplier;
+    setArea(area);
     setResult(total);
   };
 
@@ -36,9 +59,15 @@ const PaintingCalculator = () => {
       <Seo title="حاسبة تكلفة الدهان - Painting Cost Calculator" />
       <section className="py-16 container mx-auto px-4">
         <h2 className="text-3xl font-bold text-mfk-blue mb-6 text-center">{t('calculator.title')}</h2>
-        <div className="flex justify-center gap-2 mb-6">
-          {[1,2,3,4].map(n => (
-            <div key={n} className={`w-8 h-8 rounded-full flex items-center justify-center ${step>=n ? 'bg-mfk-blue text-white' : 'bg-gray-300 text-gray-500'}`}>{n}</div>
+        <div className="flex justify-center flex-wrap gap-2 mb-6">
+          {progressSteps.map(s => (
+            <div
+              key={s.number}
+              className={`flex items-center gap-2 px-3 py-1 rounded-full ${step >= s.number ? 'bg-mfk-blue text-white' : 'bg-gray-300 text-gray-500'}`}
+            >
+              <span className="w-6 h-6 flex items-center justify-center rounded-full border border-current">{s.number}</span>
+              <span className="text-sm">{s.label}</span>
+            </div>
           ))}
         </div>
         <div className="space-y-6 max-w-lg mx-auto">
@@ -68,11 +97,6 @@ const PaintingCalculator = () => {
                   <input type="number" value={width} onChange={e=>setWidth(e.target.value)} placeholder={t('calculator.width')} className="w-1/2 border rounded p-2" />
                 </div>
               )}
-              <div className="mt-2">
-                <a href="https://wa.me/971508191635" target="_blank" rel="noopener noreferrer" className="text-mfk-blue underline">
-                  {t('calculator.whatsapp')}
-                </a>
-              </div>
               <div className="flex justify-end mt-4">
                 <button onClick={()=>setStep(2)} className="bg-mfk-yellow text-mfk-blue font-bold px-6 py-2 rounded-md">{t('calculator.next')}</button>
               </div>
@@ -142,6 +166,12 @@ const PaintingCalculator = () => {
               {result !== null && (
                 <div className="text-center mt-6 space-y-4">
                   <p className="text-xl font-semibold">{t('calculator.estimated')} {result.toFixed(2)} AED</p>
+                  <div className="text-sm space-y-1">
+                    <p>{t('calculator.summary.room')}: {roomLabel}</p>
+                    <p>{t('calculator.summary.wall')}: {wallLabel}</p>
+                    <p>{t('calculator.summary.colors')}: {colorsLabel}</p>
+                    <p>{t('calculator.summary.paint')}: {qualityLabel}</p>
+                  </div>
                   <a href="https://wa.me/971508191635" target="_blank" rel="noopener noreferrer" className="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-md inline-block">
                     {t('calculator.send_whatsapp')}
                   </a>
