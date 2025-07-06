@@ -220,11 +220,14 @@
     "calculate": "Show Estimate",
     "estimated": "Estimated price:",
     "send_whatsapp": "🎯 Get the exact price now – Message us on WhatsApp",
+    "skip": "Not sure about the details? 📸 Send a photo on WhatsApp now and get the price instantly.",
+    "note_more_colors": "❗Note: Choosing more than 3 colors may increase the cost and time.",
     "progress": {
       "room": "Room type",
       "wall": "Wall condition",
       "colors": "Number of colors",
-      "paint": "Paint quality"
+      "paint": "Paint quality",
+      "result": "Result"
     },
     "summary": {
       "room": "Room or area",

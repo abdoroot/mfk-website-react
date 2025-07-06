@@ -20,7 +20,8 @@ const PaintingCalculator = () => {
     { number: 1, label: t('calculator.progress.room') },
     { number: 2, label: t('calculator.progress.wall') },
     { number: 3, label: t('calculator.progress.colors') },
-    { number: 4, label: t('calculator.progress.paint') }
+    { number: 4, label: t('calculator.progress.paint') },
+    { number: 5, label: t('calculator.progress.result') }
   ];
 
   const roomLabel =
@@ -70,7 +71,7 @@ const PaintingCalculator = () => {
             </div>
           ))}
         </div>
-        <div className="space-y-6 max-w-lg mx-auto">
+        <div className="space-y-6 max-w-lg mx-auto pb-20">
           {step === 1 && (
             <div>
               <label className="block mb-2 font-medium">{t('calculator.step1')}</label>
@@ -97,9 +98,14 @@ const PaintingCalculator = () => {
                   <input type="number" value={width} onChange={e=>setWidth(e.target.value)} placeholder={t('calculator.width')} className="w-1/2 border rounded p-2" />
                 </div>
               )}
-              <div className="flex justify-end mt-4">
+              <div className="flex justify-end mt-4 md:static fixed bottom-0 left-0 right-0 p-4 bg-white border-t md:border-0">
                 <button onClick={()=>setStep(2)} className="bg-mfk-yellow text-mfk-blue font-bold px-6 py-2 rounded-md">{t('calculator.next')}</button>
               </div>
+              <p className="text-center text-sm mt-16 md:mt-4">
+                <a href="https://wa.me/971508191635" target="_blank" rel="noopener noreferrer" className="underline text-mfk-blue">
+                  {t('calculator.skip')}
+                </a>
+              </p>
             </div>
           )}
 
@@ -117,10 +123,15 @@ const PaintingCalculator = () => {
                   </button>
                 ))}
               </div>
-              <div className="flex justify-between mt-4">
+              <div className="flex justify-between mt-4 md:static fixed bottom-0 left-0 right-0 p-4 bg-white border-t md:border-0">
                 <button onClick={()=>setStep(1)} className="border px-4 py-2 rounded">{t('calculator.back')}</button>
                 <button onClick={()=>setStep(3)} className="bg-mfk-yellow text-mfk-blue font-bold px-6 py-2 rounded-md">{t('calculator.next')}</button>
               </div>
+              <p className="text-center text-sm mt-16 md:mt-4">
+                <a href="https://wa.me/971508191635" target="_blank" rel="noopener noreferrer" className="underline text-mfk-blue">
+                  {t('calculator.skip')}
+                </a>
+              </p>
             </div>
           )}
 
@@ -138,10 +149,18 @@ const PaintingCalculator = () => {
                   </button>
                 ))}
               </div>
-              <div className="flex justify-between mt-4">
+              {colors === '3+' && (
+                <p className="text-red-600 text-sm mt-2">{t('calculator.note_more_colors')}</p>
+              )}
+              <div className="flex justify-between mt-4 md:static fixed bottom-0 left-0 right-0 p-4 bg-white border-t md:border-0">
                 <button onClick={()=>setStep(2)} className="border px-4 py-2 rounded">{t('calculator.back')}</button>
                 <button onClick={()=>setStep(4)} className="bg-mfk-yellow text-mfk-blue font-bold px-6 py-2 rounded-md">{t('calculator.next')}</button>
               </div>
+              <p className="text-center text-sm mt-16 md:mt-4">
+                <a href="https://wa.me/971508191635" target="_blank" rel="noopener noreferrer" className="underline text-mfk-blue">
+                  {t('calculator.skip')}
+                </a>
+              </p>
             </div>
           )}
 
@@ -159,24 +178,40 @@ const PaintingCalculator = () => {
                   </button>
                 ))}
               </div>
-              <div className="flex justify-between mt-4">
+              <div className="flex justify-between mt-4 md:static fixed bottom-0 left-0 right-0 p-4 bg-white border-t md:border-0">
                 <button onClick={()=>setStep(3)} className="border px-4 py-2 rounded">{t('calculator.back')}</button>
-                <button onClick={calculate} className="bg-mfk-yellow text-mfk-blue font-bold px-6 py-2 rounded-md">{t('calculator.calculate')}</button>
+                <button onClick={()=>{calculate(); setStep(5);}} className="bg-mfk-yellow text-mfk-blue font-bold px-6 py-2 rounded-md">{t('calculator.calculate')}</button>
               </div>
-              {result !== null && (
-                <div className="text-center mt-6 space-y-4">
-                  <p className="text-xl font-semibold">{t('calculator.estimated')} {result.toFixed(2)} AED</p>
-                  <div className="text-sm space-y-1">
-                    <p>{t('calculator.summary.room')}: {roomLabel}</p>
-                    <p>{t('calculator.summary.wall')}: {wallLabel}</p>
-                    <p>{t('calculator.summary.colors')}: {colorsLabel}</p>
-                    <p>{t('calculator.summary.paint')}: {qualityLabel}</p>
-                  </div>
-                  <a href="https://wa.me/971508191635" target="_blank" rel="noopener noreferrer" className="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-md inline-block">
-                    {t('calculator.send_whatsapp')}
-                  </a>
+              <p className="text-center text-sm mt-16 md:mt-4">
+                <a href="https://wa.me/971508191635" target="_blank" rel="noopener noreferrer" className="underline text-mfk-blue">
+                  {t('calculator.skip')}
+                </a>
+              </p>
+            </div>
+          )}
+
+          {step === 5 && result !== null && (
+            <div>
+              <div className="text-center mt-6 space-y-4">
+                <p className="text-xl font-semibold">{t('calculator.estimated')} {result.toFixed(2)} AED</p>
+                <div className="text-sm space-y-1">
+                  <p>{t('calculator.summary.room')}: {roomLabel}</p>
+                  <p>{t('calculator.summary.wall')}: {wallLabel}</p>
+                  <p>{t('calculator.summary.colors')}: {colorsLabel}</p>
+                  <p>{t('calculator.summary.paint')}: {qualityLabel}</p>
                 </div>
-              )}
+                <a href="https://wa.me/971508191635" target="_blank" rel="noopener noreferrer" className="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-md inline-block">
+                  {t('calculator.send_whatsapp')}
+                </a>
+              </div>
+              <div className="flex justify-between mt-4 md:static fixed bottom-0 left-0 right-0 p-4 bg-white border-t md:border-0">
+                <button onClick={()=>setStep(4)} className="border px-4 py-2 rounded">{t('calculator.back')}</button>
+              </div>
+              <p className="text-center text-sm mt-16 md:mt-4">
+                <a href="https://wa.me/971508191635" target="_blank" rel="noopener noreferrer" className="underline text-mfk-blue">
+                  {t('calculator.skip')}
+                </a>
+              </p>
             </div>
           )}
         </div>
