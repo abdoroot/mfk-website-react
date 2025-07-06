@@ -20,6 +20,7 @@ import KidFriendlyColors from './pages/KidFriendlyColors';
 import ProjectsGallery from './pages/ProjectsGallery';
 import OffwhiteVsBeige from './pages/OffwhiteVsBeige';
 import Blog from './pages/Blog';
+import PaintingCalculator from './pages/PaintingCalculator';
 import useGTMPageView from '@/components/useGTMPageView';
 
 const RouterContent = () => {
@@ -48,6 +49,8 @@ const RouterContent = () => {
             <Route path="/:lang/kid-friendly-colors" element={<KidFriendlyColors />} />
             <Route path="/:lang/projects-gallery" element={<ProjectsGallery />} />
             <Route path="/:lang/offwhite-vs-beige" element={<OffwhiteVsBeige />} />
+            <Route path="/:lang/painting-calculator" element={<PaintingCalculator />} />
+            <Route path="/painting-calculator" element={<PaintingCalculator />} />
             <Route path="/:lang/blog" element={<Blog />} />
             <Route path="/:lang/services" element={<Services />} />
             <Route path="/:lang/services/:id" element={<ServiceDetails />} />

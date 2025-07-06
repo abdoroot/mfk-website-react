@@ -1,0 +1,26 @@
+{
+  "roomTypes": [
+    { "label": "\u063a\u0631\u0641\u0629 \u0646\u0648\u0645 4x4", "value": "bedroom_4x4", "area": 16 },
+    { "label": "\u0635\u0627\u0644\u0629 4x6", "value": "living_4x6", "area": 24 },
+    { "label": "\u0645\u062c\u0644\u0633 5x5", "value": "majlis_5x5", "area": 25 },
+    { "label": "\u0641\u064a\u0644\u0627 \u062f\u0627\u062e\u0644\u064a\u0629", "value": "villa_interior", "area": 120 },
+    { "label": "\u0641\u064a\u0644\u0627 \u062e\u0627\u0631\u062c\u064a\u0629", "value": "villa_exterior", "area": 90 },
+    { "label": "\u0641\u064a\u0644\u0627 \u062f\u0627\u062e\u0644\u064a\u0629 + \u062e\u0627\u0631\u062c\u064a\u0629", "value": "villa_full", "area": 210 }
+  ],
+  "wallConditions": {
+    "excellent": 0,
+    "good": 5,
+    "minor_cracks": 10,
+    "major_cracks": 20
+  },
+  "paintQuality": {
+    "luxury": 25,
+    "standard": 15
+  },
+  "colorsMultiplier": {
+    "1": 1,
+    "2": 1.1,
+    "3+": 1.2
+  },
+  "basePricePerSquareMeter": 12
+}

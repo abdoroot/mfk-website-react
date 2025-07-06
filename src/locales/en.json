@@ -180,6 +180,37 @@
     "mobilePlaceholder": "Enter your mobile number to claim your discount.",
     "thankYou": "Thanks, your discount is saved! We'll contact you soon 😎"
   },
+  "calculator": {
+    "title": "Painting Calculator",
+    "step1": "Choose space type or enter dimensions",
+    "select": "Select",
+    "custom": "Enter dimensions manually",
+    "length": "Length (m)",
+    "width": "Width (m)",
+    "whatsapp": "I don't know – send a photo on WhatsApp",
+    "step2": "Wall condition",
+    "wall": {
+      "excellent": "Excellent",
+      "good": "Good",
+      "minor": "Minor cracks",
+      "major": "Major cracks"
+    },
+    "step3": "Number of colors",
+    "colors": {
+      "one": "One color",
+      "two": "Two colors",
+      "more": "More than two",
+      "help": "I need help choosing"
+    },
+    "step4": "Paint quality",
+    "quality": {
+      "luxury": "Luxury",
+      "standard": "Standard"
+    },
+    "calculate": "Show Estimate",
+    "estimated": "Estimated price:",
+    "send_whatsapp": "Send photo on WhatsApp"
+  },
   "blog": {
     "title": "Painting Guides",
     "intro": "Browse our latest articles"
