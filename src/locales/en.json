@@ -181,7 +181,7 @@
     "thankYou": "Thanks, your discount is saved! We'll contact you soon 😎"
   },
   "calculator": {
-    "title": "Painting Calculator",
+    "title": "Painting Cost Calculator",
     "step1": "Choose space type or enter dimensions",
     "select": "Select",
     "custom": "Enter dimensions manually",

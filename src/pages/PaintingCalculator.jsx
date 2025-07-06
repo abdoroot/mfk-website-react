@@ -33,7 +33,7 @@ const PaintingCalculator = () => {
 
   return (
     <DefaultLayout>
-      <Seo title="حاسبة الدهان - Painting Calculator" />
+      <Seo title="حاسبة تكلفة الدهان - Painting Cost Calculator" />
       <section className="py-16 container mx-auto px-4">
         <h2 className="text-3xl font-bold text-mfk-blue mb-6 text-center">{t('calculator.title')}</h2>
         <div className="flex justify-center gap-2 mb-6">
@@ -45,13 +45,23 @@ const PaintingCalculator = () => {
           {step === 1 && (
             <div>
               <label className="block mb-2 font-medium">{t('calculator.step1')}</label>
-              <select value={roomType} onChange={e=>setRoomType(e.target.value)} className="w-full border rounded p-2">
-                <option value="">{t('calculator.select')}</option>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                 {data.roomTypes.map(rt => (
-                  <option key={rt.key} value={rt.key}>{t(`calculator.rooms.${rt.key}`)}</option>
+                  <button
+                    key={rt.key}
+                    onClick={() => setRoomType(rt.key)}
+                    className={`border rounded p-2 ${roomType===rt.key ? 'bg-mfk-blue text-white' : 'bg-white'}`}
+                  >
+                    {t(`calculator.rooms.${rt.key}`)}
+                  </button>
                 ))}
-                <option value="custom">{t('calculator.custom')}</option>
-              </select>
+                <button
+                  onClick={() => setRoomType('custom')}
+                  className={`border rounded p-2 ${roomType==='custom' ? 'bg-mfk-blue text-white' : 'bg-white'}`}
+                >
+                  {t('calculator.custom')}
+                </button>
+              </div>
               {roomType === 'custom' && (
                 <div className="flex gap-2 mt-2">
                   <input type="number" value={length} onChange={e=>setLength(e.target.value)} placeholder={t('calculator.length')} className="w-1/2 border rounded p-2" />
@@ -72,12 +82,17 @@ const PaintingCalculator = () => {
           {step === 2 && (
             <div>
               <label className="block mb-2 font-medium">{t('calculator.step2')}</label>
-              <select value={wallCondition} onChange={e=>setWallCondition(e.target.value)} className="w-full border rounded p-2">
-                <option value="excellent">{t('calculator.wall.excellent')}</option>
-                <option value="good">{t('calculator.wall.good')}</option>
-                <option value="minor_cracks">{t('calculator.wall.minor')}</option>
-                <option value="major_cracks">{t('calculator.wall.major')}</option>
-              </select>
+              <div className="grid grid-cols-2 gap-2">
+                {['excellent','good','minor_cracks','major_cracks'].map(opt => (
+                  <button
+                    key={opt}
+                    onClick={() => setWallCondition(opt)}
+                    className={`border rounded p-2 ${wallCondition===opt ? 'bg-mfk-blue text-white' : 'bg-white'}`}
+                  >
+                    {t(`calculator.wall.${opt.replace('_cracks','')}`)}
+                  </button>
+                ))}
+              </div>
               <div className="flex justify-between mt-4">
                 <button onClick={()=>setStep(1)} className="border px-4 py-2 rounded">{t('calculator.back')}</button>
                 <button onClick={()=>setStep(3)} className="bg-mfk-yellow text-mfk-blue font-bold px-6 py-2 rounded-md">{t('calculator.next')}</button>
@@ -88,12 +103,17 @@ const PaintingCalculator = () => {
           {step === 3 && (
             <div>
               <label className="block mb-2 font-medium">{t('calculator.step3')}</label>
-              <select value={colors} onChange={e=>setColors(e.target.value)} className="w-full border rounded p-2">
-                <option value="1">{t('calculator.colors.one')}</option>
-                <option value="2">{t('calculator.colors.two')}</option>
-                <option value="3+">{t('calculator.colors.more')}</option>
-                <option value="help">{t('calculator.colors.help')}</option>
-              </select>
+              <div className="grid grid-cols-2 gap-2">
+                {['1','2','3+','help'].map(opt => (
+                  <button
+                    key={opt}
+                    onClick={() => setColors(opt)}
+                    className={`border rounded p-2 ${colors===opt ? 'bg-mfk-blue text-white' : 'bg-white'}`}
+                  >
+                    {t(`calculator.colors.${opt==='1'?'one':opt==='2'?'two':opt==='3+'?'more':'help'}`)}
+                  </button>
+                ))}
+              </div>
               <div className="flex justify-between mt-4">
                 <button onClick={()=>setStep(2)} className="border px-4 py-2 rounded">{t('calculator.back')}</button>
                 <button onClick={()=>setStep(4)} className="bg-mfk-yellow text-mfk-blue font-bold px-6 py-2 rounded-md">{t('calculator.next')}</button>
@@ -104,10 +124,17 @@ const PaintingCalculator = () => {
           {step === 4 && (
             <div>
               <label className="block mb-2 font-medium">{t('calculator.step4')}</label>
-              <select value={quality} onChange={e=>setQuality(e.target.value)} className="w-full border rounded p-2">
-                <option value="luxury">{t('calculator.quality.luxury')}</option>
-                <option value="standard">{t('calculator.quality.standard')}</option>
-              </select>
+              <div className="grid grid-cols-2 gap-2">
+                {['luxury','standard'].map(opt => (
+                  <button
+                    key={opt}
+                    onClick={() => setQuality(opt)}
+                    className={`border rounded p-2 ${quality===opt ? 'bg-mfk-blue text-white' : 'bg-white'}`}
+                  >
+                    {t(`calculator.quality.${opt}`)}
+                  </button>
+                ))}
+              </div>
               <div className="flex justify-between mt-4">
                 <button onClick={()=>setStep(3)} className="border px-4 py-2 rounded">{t('calculator.back')}</button>
                 <button onClick={calculate} className="bg-mfk-yellow text-mfk-blue font-bold px-6 py-2 rounded-md">{t('calculator.calculate')}</button>
