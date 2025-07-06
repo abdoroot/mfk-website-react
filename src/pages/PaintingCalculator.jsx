@@ -13,11 +13,12 @@ const PaintingCalculator = () => {
   const [colors, setColors] = useState('1');
   const [quality, setQuality] = useState('luxury');
   const [result, setResult] = useState(null);
+  const [step, setStep] = useState(1);
 
   const calculate = () => {
     let area = 0;
     if (roomType && roomType !== 'custom') {
-      const selected = data.roomTypes.find(r => r.value === roomType);
+      const selected = data.roomTypes.find(r => r.key === roomType);
       area = selected ? selected.area : 0;
     } else if (length && width) {
       area = parseFloat(length) * parseFloat(width);
@@ -32,108 +33,93 @@ const PaintingCalculator = () => {
 
   return (
     <DefaultLayout>
-      <Seo title="\u062d\u0627\u0633\u0628\u0629 \u0627\u0644\u062f\u0647\u0627\u0646 - Painting Calculator" />
+      <Seo title="حاسبة الدهان - Painting Calculator" />
       <section className="py-16 container mx-auto px-4">
         <h2 className="text-3xl font-bold text-mfk-blue mb-6 text-center">{t('calculator.title')}</h2>
+        <div className="flex justify-center gap-2 mb-6">
+          {[1,2,3,4].map(n => (
+            <div key={n} className={`w-8 h-8 rounded-full flex items-center justify-center ${step>=n ? 'bg-mfk-blue text-white' : 'bg-gray-300 text-gray-500'}`}>{n}</div>
+          ))}
+        </div>
         <div className="space-y-6 max-w-lg mx-auto">
-          <div>
-            <label className="block mb-2 font-medium">{t('calculator.step1')}</label>
-            <select
-              value={roomType}
-              onChange={(e)=>setRoomType(e.target.value)}
-              className="w-full border rounded p-2"
-            >
-              <option value="">{t('calculator.select')}</option>
-              {data.roomTypes.map(rt => (
-                <option key={rt.value} value={rt.value}>{rt.label}</option>
-              ))}
-              <option value="custom">{t('calculator.custom')}</option>
-            </select>
-            {roomType === 'custom' && (
-              <div className="flex gap-2 mt-2">
-                <input
-                  type="number"
-                  value={length}
-                  onChange={(e)=>setLength(e.target.value)}
-                  placeholder={t('calculator.length')}
-                  className="w-1/2 border rounded p-2"
-                />
-                <input
-                  type="number"
-                  value={width}
-                  onChange={(e)=>setWidth(e.target.value)}
-                  placeholder={t('calculator.width')}
-                  className="w-1/2 border rounded p-2"
-                />
+          {step === 1 && (
+            <div>
+              <label className="block mb-2 font-medium">{t('calculator.step1')}</label>
+              <select value={roomType} onChange={e=>setRoomType(e.target.value)} className="w-full border rounded p-2">
+                <option value="">{t('calculator.select')}</option>
+                {data.roomTypes.map(rt => (
+                  <option key={rt.key} value={rt.key}>{t(`calculator.rooms.${rt.key}`)}</option>
+                ))}
+                <option value="custom">{t('calculator.custom')}</option>
+              </select>
+              {roomType === 'custom' && (
+                <div className="flex gap-2 mt-2">
+                  <input type="number" value={length} onChange={e=>setLength(e.target.value)} placeholder={t('calculator.length')} className="w-1/2 border rounded p-2" />
+                  <input type="number" value={width} onChange={e=>setWidth(e.target.value)} placeholder={t('calculator.width')} className="w-1/2 border rounded p-2" />
+                </div>
+              )}
+              <div className="mt-2">
+                <a href="https://wa.me/971508191635" target="_blank" rel="noopener noreferrer" className="text-mfk-blue underline">
+                  {t('calculator.whatsapp')}
+                </a>
               </div>
-            )}
-            <div className="mt-2">
-              <a href="https://wa.me/971508191635" target="_blank" className="text-mfk-blue underline" rel="noopener noreferrer">
-                {t('calculator.whatsapp')}
-              </a>
+              <div className="flex justify-end mt-4">
+                <button onClick={()=>setStep(2)} className="bg-mfk-yellow text-mfk-blue font-bold px-6 py-2 rounded-md">{t('calculator.next')}</button>
+              </div>
             </div>
-          </div>
+          )}
 
-          <div>
-            <label className="block mb-2 font-medium">{t('calculator.step2')}</label>
-            <select
-              value={wallCondition}
-              onChange={(e)=>setWallCondition(e.target.value)}
-              className="w-full border rounded p-2"
-            >
-              <option value="excellent">{t('calculator.wall.excellent')}</option>
-              <option value="good">{t('calculator.wall.good')}</option>
-              <option value="minor_cracks">{t('calculator.wall.minor')}</option>
-              <option value="major_cracks">{t('calculator.wall.major')}</option>
-            </select>
-          </div>
+          {step === 2 && (
+            <div>
+              <label className="block mb-2 font-medium">{t('calculator.step2')}</label>
+              <select value={wallCondition} onChange={e=>setWallCondition(e.target.value)} className="w-full border rounded p-2">
+                <option value="excellent">{t('calculator.wall.excellent')}</option>
+                <option value="good">{t('calculator.wall.good')}</option>
+                <option value="minor_cracks">{t('calculator.wall.minor')}</option>
+                <option value="major_cracks">{t('calculator.wall.major')}</option>
+              </select>
+              <div className="flex justify-between mt-4">
+                <button onClick={()=>setStep(1)} className="border px-4 py-2 rounded">{t('calculator.back')}</button>
+                <button onClick={()=>setStep(3)} className="bg-mfk-yellow text-mfk-blue font-bold px-6 py-2 rounded-md">{t('calculator.next')}</button>
+              </div>
+            </div>
+          )}
 
-          <div>
-            <label className="block mb-2 font-medium">{t('calculator.step3')}</label>
-            <select
-              value={colors}
-              onChange={(e)=>setColors(e.target.value)}
-              className="w-full border rounded p-2"
-            >
-              <option value="1">{t('calculator.colors.one')}</option>
-              <option value="2">{t('calculator.colors.two')}</option>
-              <option value="3+">{t('calculator.colors.more')}</option>
-              <option value="help">{t('calculator.colors.help')}</option>
-            </select>
-          </div>
+          {step === 3 && (
+            <div>
+              <label className="block mb-2 font-medium">{t('calculator.step3')}</label>
+              <select value={colors} onChange={e=>setColors(e.target.value)} className="w-full border rounded p-2">
+                <option value="1">{t('calculator.colors.one')}</option>
+                <option value="2">{t('calculator.colors.two')}</option>
+                <option value="3+">{t('calculator.colors.more')}</option>
+                <option value="help">{t('calculator.colors.help')}</option>
+              </select>
+              <div className="flex justify-between mt-4">
+                <button onClick={()=>setStep(2)} className="border px-4 py-2 rounded">{t('calculator.back')}</button>
+                <button onClick={()=>setStep(4)} className="bg-mfk-yellow text-mfk-blue font-bold px-6 py-2 rounded-md">{t('calculator.next')}</button>
+              </div>
+            </div>
+          )}
 
-          <div>
-            <label className="block mb-2 font-medium">{t('calculator.step4')}</label>
-            <select
-              value={quality}
-              onChange={(e)=>setQuality(e.target.value)}
-              className="w-full border rounded p-2"
-            >
-              <option value="luxury">{t('calculator.quality.luxury')}</option>
-              <option value="standard">{t('calculator.quality.standard')}</option>
-            </select>
-          </div>
-
-          <button
-            onClick={calculate}
-            className="bg-mfk-yellow text-mfk-blue font-bold px-6 py-3 rounded-md w-full"
-          >
-            {t('calculator.calculate')}
-          </button>
-
-          {result !== null && (
-            <div className="text-center mt-6 space-y-4">
-              <p className="text-xl font-semibold">
-                {t('calculator.estimated')} {result.toFixed(2)} AED
-              </p>
-              <a
-                href="https://wa.me/971508191635"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-md inline-block"
-              >
-                {t('calculator.send_whatsapp')}
-              </a>
+          {step === 4 && (
+            <div>
+              <label className="block mb-2 font-medium">{t('calculator.step4')}</label>
+              <select value={quality} onChange={e=>setQuality(e.target.value)} className="w-full border rounded p-2">
+                <option value="luxury">{t('calculator.quality.luxury')}</option>
+                <option value="standard">{t('calculator.quality.standard')}</option>
+              </select>
+              <div className="flex justify-between mt-4">
+                <button onClick={()=>setStep(3)} className="border px-4 py-2 rounded">{t('calculator.back')}</button>
+                <button onClick={calculate} className="bg-mfk-yellow text-mfk-blue font-bold px-6 py-2 rounded-md">{t('calculator.calculate')}</button>
+              </div>
+              {result !== null && (
+                <div className="text-center mt-6 space-y-4">
+                  <p className="text-xl font-semibold">{t('calculator.estimated')} {result.toFixed(2)} AED</p>
+                  <a href="https://wa.me/971508191635" target="_blank" rel="noopener noreferrer" className="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-md inline-block">
+                    {t('calculator.send_whatsapp')}
+                  </a>
+                </div>
+              )}
             </div>
           )}
         </div>

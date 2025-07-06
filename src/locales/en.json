@@ -188,6 +188,14 @@
     "length": "Length (m)",
     "width": "Width (m)",
     "whatsapp": "I don't know – send a photo on WhatsApp",
+    "rooms": {
+      "bedroom_4x4": "Bedroom 4x4",
+      "living_4x6": "Living Room 4x6",
+      "majlis_5x5": "Majlis 5x5",
+      "villa_interior": "Villa interior",
+      "villa_exterior": "Villa exterior",
+      "villa_full": "Villa interior + exterior"
+    },
     "step2": "Wall condition",
     "wall": {
       "excellent": "Excellent",
@@ -207,6 +215,8 @@
       "luxury": "Luxury",
       "standard": "Standard"
     },
+    "next": "Next",
+    "back": "Back",
     "calculate": "Show Estimate",
     "estimated": "Estimated price:",
     "send_whatsapp": "Send photo on WhatsApp"
