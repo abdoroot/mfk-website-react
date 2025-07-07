@@ -22,6 +22,7 @@ const routes = [
     '/kid-friendly-colors',
     '/projects-gallery',
     '/offwhite-vs-beige',
+    '/painting-calculator',
     '/blog',
     '/services'
 ];

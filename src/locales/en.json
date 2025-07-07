@@ -124,6 +124,7 @@
     "privacyPolicy": "Privacy Policy",
     "about": "About Us",
     "contact": "Contact Us",
+    "calculator": "Painting Cost Calculator",
     "contactUs": "Contact Us",
     "phone": "0508191635",
     "email": "info@mfk.com",
@@ -179,6 +180,62 @@
     "cta": "Don't Miss Out – Save 20% Today",
     "mobilePlaceholder": "Enter your mobile number to claim your discount.",
     "thankYou": "Thanks, your discount is saved! We'll contact you soon 😎"
+  },
+  "calculator": {
+    "title": "Painting Cost Calculator",
+    "step1": "Choose space type or enter dimensions",
+    "select": "Select",
+    "custom": "Enter dimensions manually",
+    "length": "Length (m)",
+    "width": "Width (m)",
+    "whatsapp": "I don't know – send a photo on WhatsApp",
+    "rooms": {
+      "bedroom_4x4": "Bedroom 4x4",
+      "living_4x6": "Living Room 4x6",
+      "majlis_5x5": "Majlis 5x5",
+      "villa_interior": "Villa interior",
+      "villa_exterior": "Villa exterior",
+      "villa_full": "Villa interior + exterior"
+    },
+    "step2": "Wall condition",
+    "wall": {
+      "excellent": "Excellent",
+      "good": "Good",
+      "minor": "Minor cracks",
+      "major": "Major cracks"
+    },
+    "step3": "Number of colors",
+    "colors": {
+      "one": "One color",
+      "two": "Two colors",
+      "more": "More than two",
+      "help": "I need help choosing"
+    },
+    "step4": "Paint quality",
+    "quality": {
+      "luxury": "Luxury",
+      "standard": "Standard"
+    },
+    "next": "Next",
+    "back": "Back",
+    "calculate": "Show Estimate",
+    "estimated": "Estimated price:",
+    "send_whatsapp": "🎯 Get the exact price now – Message us on WhatsApp",
+    "skip": "Not sure about the details? 📸 Send a photo on WhatsApp now and get the price instantly.",
+    "note_more_colors": "❗Note: Choosing more than 3 colors may increase the cost and time.",
+    "progress": {
+      "room": "Room type",
+      "wall": "Wall condition",
+      "colors": "Number of colors",
+      "paint": "Paint quality",
+      "result": "Result"
+    },
+    "summary": {
+      "room": "Room or area",
+      "wall": "Wall condition",
+      "colors": "Colors",
+      "paint": "Paint quality"
+    }
   },
   "blog": {
     "title": "Painting Guides",
