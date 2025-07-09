@@ -24,7 +24,7 @@ const NavBar = () => {
             <div className="container mx-auto px-4 py-4">
                 <div className="flex justify-between items-center">
                     {/* Logo */}
-                    <h1 className="text-2xl font-bold text-mfk-blue">
+                    <div className="text-2xl font-bold text-mfk-blue">
                         <Link to={`/${lang}`}>
                             <img
                                 src='/images/logo_120px.png'
@@ -34,7 +34,7 @@ const NavBar = () => {
                                 alt="شعار الشركة"
                             />
                         </Link>
-                    </h1>
+                    </div>
 
                     {/* Desktop Navigation */}
                     <div className="flex items-center gap-8">

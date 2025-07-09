@@ -36,9 +36,11 @@ const ServiceDetails = () => {
             />
             <section className="py-16 bg-gray-100">
                 <div className="container mx-auto px-4 text-center">
-                    <h3 className="text-3xl font-bold mb-6 text-mfk-blue">
-                        {lang === 'ar' ? selectedService.title : selectedService.title_en}
-                    </h3>
+                    <h1 className="text-3xl font-bold mb-6 text-mfk-blue">
+                        {lang === 'ar'
+                            ? selectedService.title
+                            : selectedService.title_en}
+                    </h1>
                     <img
                         src={selectedService.img}
                         alt={lang === 'ar' ? selectedService.title : selectedService.title_en}

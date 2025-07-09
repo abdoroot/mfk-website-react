@@ -59,7 +59,7 @@ const PaintingCalculator = () => {
     <DefaultLayout>
       <Seo title="حاسبة تكلفة الدهان - Painting Cost Calculator" />
       <section className="py-16 container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-mfk-blue mb-6 text-center">{t('calculator.title')}</h2>
+        <h1 className="text-3xl font-bold text-mfk-blue mb-6 text-center">{t('calculator.title')}</h1>
         <div className="flex justify-center flex-wrap gap-2 mb-6">
           {progressSteps.map(s => (
             <div
