@@ -195,7 +195,13 @@
       "majlis_5x5": "مجلس 5x5",
       "villa_interior": "فيلا داخلية",
       "villa_exterior": "فيلا خارجية",
-      "villa_full": "فيلا داخلية + خارجية"
+      "villa_full": "فيلا داخلية + خارجية",
+      "kitchen_3x4": "مطبخ 3x4",
+      "bathroom_2x3": "حمام 2x3",
+      "hallway": "ممر",
+      "maid_room": "غرفة خادمة",
+      "kids_room_3x3": "غرفة أطفال 3x3",
+      "dining_4x4": "غرفة طعام 4x4"
     },
     "step2": "حالة الجدران",
     "wall": {
