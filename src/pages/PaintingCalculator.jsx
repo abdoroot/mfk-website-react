@@ -51,8 +51,9 @@ const PaintingCalculator = () => {
     const qualityPrice = data.paintQuality[quality] || 0;
     const multiplier = data.colorsMultiplier[colors] || 1;
     const total = (basePrice + wallExtra + qualityPrice) * multiplier;
+    const finalTotal = Math.max(total, data.minimumPrice || 0);
     setArea(area);
-    setResult(total);
+    setResult(finalTotal);
   };
 
   return (
