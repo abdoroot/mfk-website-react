@@ -52,8 +52,8 @@
     "major_cracks": 20
   },
   "paintQuality": {
-    "luxury": 15,
-    "standard": 8
+    "luxury": 8,
+    "standard": 5
   },
   "colorsMultiplier": {
     "1": 1,
