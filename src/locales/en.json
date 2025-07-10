@@ -195,7 +195,13 @@
       "majlis_5x5": "Majlis 5x5",
       "villa_interior": "Villa interior",
       "villa_exterior": "Villa exterior",
-      "villa_full": "Villa interior + exterior"
+      "villa_full": "Villa interior + exterior",
+      "kitchen_3x4": "Kitchen 3x4",
+      "bathroom_2x3": "Bathroom 2x3",
+      "hallway": "Hallway",
+      "maid_room": "Maid's room",
+      "kids_room_3x3": "Kids room 3x3",
+      "dining_4x4": "Dining room 4x4"
     },
     "step2": "Wall condition",
     "wall": {
