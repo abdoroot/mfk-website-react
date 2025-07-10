@@ -2,51 +2,47 @@
   "roomTypes": [
     {
       "key": "bedroom_4x4",
-      "area": 16
+      "area": 64
     },
     {
       "key": "living_4x6",
-      "area": 24
+      "area": 64
     },
     {
       "key": "majlis_5x5",
-      "area": 25
+      "area": 100
     },
     {
       "key": "villa_interior",
-      "area": 120
+      "area": 800
     },
     {
       "key": "villa_exterior",
-      "area": 90
+      "area": 1000
     },
     {
       "key": "villa_full",
-      "area": 210
+      "area": 1800
     },
     {
       "key": "kitchen_3x4",
-      "area": 12
-    },
-    {
-      "key": "bathroom_2x3",
-      "area": 6
+      "area": 48
     },
     {
       "key": "hallway",
-      "area": 10
+      "area": 40
     },
     {
       "key": "maid_room",
-      "area": 9
+      "area": 36
     },
     {
       "key": "kids_room_3x3",
-      "area": 9
+      "area": 36
     },
     {
       "key": "dining_4x4",
-      "area": 16
+      "area": 64
     }
   ],
   "wallConditions": {
