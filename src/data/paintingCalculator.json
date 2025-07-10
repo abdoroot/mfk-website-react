@@ -1,11 +1,53 @@
 {
   "roomTypes": [
-    { "key": "bedroom_4x4", "area": 16 },
-    { "key": "living_4x6", "area": 24 },
-    { "key": "majlis_5x5", "area": 25 },
-    { "key": "villa_interior", "area": 120 },
-    { "key": "villa_exterior", "area": 90 },
-    { "key": "villa_full", "area": 210 }
+    {
+      "key": "bedroom_4x4",
+      "area": 16
+    },
+    {
+      "key": "living_4x6",
+      "area": 24
+    },
+    {
+      "key": "majlis_5x5",
+      "area": 25
+    },
+    {
+      "key": "villa_interior",
+      "area": 120
+    },
+    {
+      "key": "villa_exterior",
+      "area": 90
+    },
+    {
+      "key": "villa_full",
+      "area": 210
+    },
+    {
+      "key": "kitchen_3x4",
+      "area": 12
+    },
+    {
+      "key": "bathroom_2x3",
+      "area": 6
+    },
+    {
+      "key": "hallway",
+      "area": 10
+    },
+    {
+      "key": "maid_room",
+      "area": 9
+    },
+    {
+      "key": "kids_room_3x3",
+      "area": 9
+    },
+    {
+      "key": "dining_4x4",
+      "area": 16
+    }
   ],
   "wallConditions": {
     "excellent": 0,
@@ -14,8 +56,8 @@
     "major_cracks": 20
   },
   "paintQuality": {
-    "luxury": 25,
-    "standard": 15
+    "luxury": 27,
+    "standard": 20
   },
   "colorsMultiplier": {
     "1": 1,
