@@ -47,13 +47,13 @@
   ],
   "wallConditions": {
     "excellent": 0,
-    "good": 5,
-    "minor_cracks": 10,
-    "major_cracks": 20
+    "good": 3,
+    "minor_cracks": 4,
+    "major_cracks": 7
   },
   "paintQuality": {
-    "luxury": 8,
-    "standard": 5
+    "luxury": 6,
+    "standard": 3
   },
   "colorsMultiplier": {
     "1": 1,
